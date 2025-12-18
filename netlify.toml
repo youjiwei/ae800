@@ -1,0 +1,6 @@
+[build]
+  publish = "."
+  command = "node ./tools/build_case_pages.mjs"
+
+[build.environment]
+  NODE_VERSION = "18"

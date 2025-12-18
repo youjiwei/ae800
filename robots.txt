@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.ae800.com/sitemap.xml

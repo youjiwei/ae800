@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>核心能力 - AE800</title>
+  <meta name="description" content="灯箱系统、金属结构、多媒体互动、沉浸式场景的一体化落地能力。" />
+  <link rel="canonical" href="https://www.ae800.com/capabilities/" />
+  <meta property="og:title" content="核心能力 - AE800" />
+  <meta property="og:description" content="灯箱系统、金属结构、多媒体互动与沉浸式场景的一体化落地能力：从深化、制作到安装调试。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ae800.com/capabilities/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=70" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="核心能力 - AE800" />
+  <meta name="twitter:description" content="灯箱系统、金属结构、多媒体互动与沉浸式场景的一体化落地能力：从深化、制作到安装调试。" />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=70" />
+  <link rel="icon" href="data:," />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "核心能力 - AE800",
+      "url": "https://www.ae800.com/capabilities/",
+      "inLanguage": ["zh-CN", "en"],
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.ae800.com/"},
+          {"@type": "ListItem", "position": 2, "name": "能力", "item": "https://www.ae800.com/capabilities/"}
+        ]
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-slate-900 bg-slate-50">
+  <style>
+    @keyframes capFadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .cap-reveal { opacity: 0; transform: translateY(12px); }
+    .cap-reveal.is-in { animation: capFadeUp .55s ease-out forwards; }
+    @keyframes capPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37,99,235,.0); }
+      50% { transform: scale(1.04); box-shadow: 0 0 0 10px rgba(37,99,235,.08); }
+    }
+    .cap-icon-pulse { animation: capPulse 2.4s ease-in-out infinite; }
+    .cap-demo-rail { stroke-dasharray: 360; stroke-dashoffset: 360; }
+    @keyframes capDraw { to { stroke-dashoffset: 0; } }
+    .cap-demo-rail.is-draw { animation: capDraw .7s ease-out forwards; }
+    .cap-node { transition: transform .25s ease, filter .25s ease; }
+    .cap-node.is-active { transform: scale(1.06); filter: drop-shadow(0 10px 18px rgba(2,6,23,.18)); }
+    .cap-demo-dot { transition: opacity .25s ease; opacity: .45; }
+    .cap-node.is-active .cap-demo-dot { opacity: 1; }
+    .motto-stage { position: relative; overflow: hidden; background: #0b1220; }
+    .motto-stage::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 22px 22px;
+      opacity: .35;
+      pointer-events: none;
+    }
+    .motto-stage::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(140px 140px at var(--mx, 50%) var(--my, 45%), rgba(37,99,235,.55), rgba(37,99,235,.0) 65%),
+        radial-gradient(520px 240px at 50% 50%, rgba(15,23,42,.0), rgba(2,6,23,.65) 70%);
+      pointer-events: none;
+      transition: opacity .18s ease;
+    }
+    .motto-stage[data-mode="light"]::after {
+      background:
+        radial-gradient(160px 160px at var(--mx, 50%) var(--my, 45%), rgba(56,189,248,.6), rgba(56,189,248,.0) 68%),
+        radial-gradient(520px 240px at 50% 50%, rgba(15,23,42,.0), rgba(2,6,23,.68) 70%);
+    }
+    .motto-stage[data-mode="structure"]::after {
+      background:
+        radial-gradient(160px 160px at var(--mx, 50%) var(--my, 45%), rgba(245,158,11,.55), rgba(245,158,11,.0) 68%),
+        radial-gradient(520px 240px at 50% 50%, rgba(15,23,42,.0), rgba(2,6,23,.68) 70%);
+    }
+    .motto-stage[data-mode="digital"]::after {
+      background:
+        radial-gradient(160px 160px at var(--mx, 50%) var(--my, 45%), rgba(16,185,129,.55), rgba(16,185,129,.0) 68%),
+        radial-gradient(520px 240px at 50% 50%, rgba(15,23,42,.0), rgba(2,6,23,.68) 70%);
+    }
+    .motto-chip { border: 1px solid rgba(255,255,255,.18); background: rgba(15,23,42,.55); color: rgba(255,255,255,.92); }
+    .motto-chip.is-active { border-color: rgba(255,255,255,.36); background: rgba(15,23,42,.78); }
+    .motto-line { color: rgba(255,255,255,.88); }
+    .motto-sub { color: rgba(255,255,255,.72); }
+    @media (prefers-reduced-motion: reduce) {
+      .motto-stage::after { transition: none !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .cap-reveal { opacity: 1 !important; transform: none !important; }
+      .cap-reveal.is-in { animation: none !important; }
+      .cap-icon-pulse { animation: none !important; }
+      .cap-demo-rail { stroke-dashoffset: 0 !important; }
+      .cap-demo-rail.is-draw { animation: none !important; }
+    }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50" id="siteHeader">
+    <div class="bg-white/80 backdrop-blur border-b border-slate-200" id="headerBar">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16">
+          <a class="flex items-center gap-3" href="../index.html" aria-label="返回首页">
+            <div class="h-9 w-9 rounded-lg bg-brand-600 text-white grid place-items-center font-bold">AE</div>
+            <div class="leading-tight">
+              <div class="font-semibold">AE800</div>
+              <div class="text-xs text-slate-500" data-i18n="brand_tagline">数字化展陈 · 灯箱系统 · 互动装置</div>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6" aria-label="主导航">
+            <a class="nav-link" href="./index.html" data-i18n="nav_capabilities">能力</a>
+            <a class="nav-link" href="../solutions/index.html" data-i18n="nav_solutions">解决方案</a>
+            <a class="nav-link" href="../services/index.html" data-i18n="nav_services">服务</a>
+            <a class="nav-link" href="../products/index.html" data-i18n="nav_products">产品</a>
+            <a class="nav-link" href="../cases/index.html" data-i18n="nav_cases">案例</a>
+            <a class="nav-link" href="../docs/index.html" data-i18n="nav_docs">资料</a>
+            <a class="nav-link" href="../contact/index.html" data-i18n="nav_contact">联系</a>
+            <a class="btn btn-filled" href="../contact/index.html" data-cta="top">
+              <i class="fa-solid fa-comment-dots"></i>
+              <span data-i18n="nav_cta">获取方案</span>
+            </a>
+          </nav>
+
+          <button class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-slate-200 bg-white" id="mobileMenuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileMenu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobileMenu">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 pb-4">
+          <div class="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+            <a class="mobile-link" href="./index.html" data-i18n="nav_capabilities">能力</a>
+            <a class="mobile-link" href="../solutions/index.html" data-i18n="nav_solutions">解决方案</a>
+            <a class="mobile-link" href="../services/index.html" data-i18n="nav_services">服务</a>
+            <a class="mobile-link" href="../products/index.html" data-i18n="nav_products">产品</a>
+            <a class="mobile-link" href="../cases/index.html" data-i18n="nav_cases">案例</a>
+            <a class="mobile-link" href="../docs/index.html" data-i18n="nav_docs">资料</a>
+            <a class="mobile-link" href="../contact/index.html" data-i18n="nav_contact">联系</a>
+            <div class="pt-2">
+              <a class="btn btn-filled w-full" href="../contact/index.html" data-cta="mobile">
+                <i class="fa-solid fa-phone"></i>
+                <span data-i18n="nav_cta_mobile">立即咨询</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 sm:px-6 py-10 pt-16">
+    <h1 class="text-3xl font-bold">核心能力</h1>
+    <p class="mt-3 text-slate-600 max-w-3xl">以<strong>灯光结构 + 多媒体互动 + 沉浸式体验</strong>为核心能力，提供从设计、深化、制作到安装调试的一体化交付服务。</p>
+
+    <div class="mt-8 grid sm:grid-cols-2 gap-6">
+      <section class="card cap-reveal" data-cap-reveal>
+        <div class="card-icon cap-icon-pulse"><i class="fa-solid fa-lightbulb"></i></div>
+        <div class="card-title">① 灯箱系统生产能力</div>
+        <div class="card-desc">超薄 / 弧形 / 模块化 / 大型拉布灯箱 / 光墙系统 / 可维护灯箱系统。</div>
+      </section>
+
+      <section class="card cap-reveal" data-cap-reveal>
+        <div class="card-icon cap-icon-pulse"><i class="fa-solid fa-cubes"></i></div>
+        <div class="card-title">② 金属结构加工能力</div>
+        <div class="card-desc">异形结构、弧形造型、展项外壳结构、精准焊接与打磨。</div>
+      </section>
+
+      <section class="card cap-reveal" data-cap-reveal>
+        <div class="card-icon cap-icon-pulse"><i class="fa-solid fa-display"></i></div>
+        <div class="card-title">③ 多媒体互动系统整合</div>
+        <div class="card-desc">AI 讲解、体感互动、触控互动、电子翻书、多媒体投影等。</div>
+      </section>
+
+      <section class="card cap-reveal" data-cap-reveal>
+        <div class="card-icon cap-icon-pulse"><i class="fa-solid fa-sitemap"></i></div>
+        <div class="card-title">④ 一体化落地交付能力</div>
+        <div class="card-desc">深化设计、结构制作、多媒体调试、现场安装施工，全程可控。</div>
+      </section>
+    </div>
+
+    <section class="mt-10 rounded-3xl bg-white border border-slate-200 p-6" style="border-radius:var(--radius)" id="capDemo" data-cap-demo>
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <div>
+          <div class="text-sm font-semibold text-slate-900">交付链路演示</div>
+          <div class="mt-1 text-sm text-slate-600">点击切换能力模块，右侧同步更新要点；中间流程线会高亮播放。</div>
+        </div>
+        <a class="btn btn-outlined" href="../cases/index.html">看相关案例</a>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-2" role="tablist" aria-label="能力演示切换" id="capDemoTabs">
+        <button class="tab is-active" type="button" role="tab" aria-selected="true" data-step="lightbox">灯箱系统</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-step="structure">结构加工</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-step="interactive">互动集成</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-step="turnkey">一体化交付</button>
+      </div>
+
+      <div class="mt-5 grid lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-7 rounded-3xl bg-slate-50 border border-slate-200 p-5" style="border-radius:var(--radius)">
+          <svg viewBox="0 0 720 210" width="100%" height="210" aria-label="交付链路示意">
+            <path d="M 70 105 C 170 40, 250 40, 330 105 C 410 170, 490 170, 570 105 C 650 40, 680 70, 690 105" fill="none" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round" />
+            <path d="M 70 105 C 170 40, 250 40, 330 105 C 410 170, 490 170, 570 105 C 650 40, 680 70, 690 105" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round" class="cap-demo-rail" id="capDemoRail" />
+
+            <g class="cap-node is-active" data-node="lightbox">
+              <circle cx="90" cy="105" r="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+              <circle class="cap-demo-dot" cx="90" cy="105" r="10" fill="#2563eb" />
+              <text x="90" y="158" text-anchor="middle" font-size="14" fill="#0f172a">灯箱</text>
+            </g>
+            <g class="cap-node" data-node="structure">
+              <circle cx="280" cy="70" r="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+              <circle class="cap-demo-dot" cx="280" cy="70" r="10" fill="#f59e0b" />
+              <text x="280" y="158" text-anchor="middle" font-size="14" fill="#0f172a">结构</text>
+            </g>
+            <g class="cap-node" data-node="interactive">
+              <circle cx="460" cy="150" r="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+              <circle class="cap-demo-dot" cx="460" cy="150" r="10" fill="#10b981" />
+              <text x="460" y="158" text-anchor="middle" font-size="14" fill="#0f172a">互动</text>
+            </g>
+            <g class="cap-node" data-node="turnkey">
+              <circle cx="650" cy="105" r="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+              <circle class="cap-demo-dot" cx="650" cy="105" r="10" fill="#7c3aed" />
+              <text x="650" y="158" text-anchor="middle" font-size="14" fill="#0f172a">交付</text>
+            </g>
+          </svg>
+          <div class="mt-3 text-xs text-slate-500">提示：这是“沟通口径演示”，实际项目可按节点拆分：深化/制作/安装/调试/验收。</div>
+        </div>
+
+        <div class="lg:col-span-5 rounded-3xl bg-white border border-slate-200 p-6" style="border-radius:var(--radius)">
+          <div class="text-sm text-slate-500" id="capDemoKicker">当前模块</div>
+          <div class="mt-1 text-2xl font-bold" id="capDemoTitle">灯箱系统</div>
+          <div class="mt-3 text-sm text-slate-600" id="capDemoDesc">灯光结构系统化：适配超薄/弧形/模块化灯箱，强调可维护、均匀光源与现场快装。</div>
+          <ul class="mt-4 list-disc pl-5 text-sm text-slate-700" id="capDemoList"></ul>
+          <div class="mt-5">
+            <a class="btn btn-filled w-full" href="../contact/index.html">
+              <i class="fa-solid fa-comment-dots"></i>
+              <span>按该模块咨询报价</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-10 rounded-3xl bg-white border border-slate-200 p-6">
+      <div class="font-semibold">推荐口号</div>
+      <div class="mt-2 text-slate-700">灯光 · 结构 · 数字交互 —— 让空间开口说话</div>
+      <div class="text-sm text-slate-500">Let Space Speak.</div>
+
+      <div class="mt-5 rounded-3xl border border-slate-200" style="border-radius:var(--radius)">
+        <div class="motto-stage rounded-3xl p-5" style="border-radius:var(--radius);" data-motto-stage data-mode="light">
+          <div class="flex items-center justify-between gap-3 flex-wrap" style="position:relative;z-index:1;">
+            <div class="text-sm font-semibold motto-line">Light · Structure · Digital</div>
+            <div class="flex gap-2 flex-wrap" role="tablist" aria-label="口号互动演示">
+              <button type="button" class="motto-chip px-3 py-1.5 text-xs rounded-xl is-active" data-motto-mode="light">灯光</button>
+              <button type="button" class="motto-chip px-3 py-1.5 text-xs rounded-xl" data-motto-mode="structure">结构</button>
+              <button type="button" class="motto-chip px-3 py-1.5 text-xs rounded-xl" data-motto-mode="digital">数字交互</button>
+            </div>
+          </div>
+          <div class="mt-3 motto-sub text-sm" style="position:relative;z-index:1;">移动鼠标/手指，让“光”扫过结构网格；切换模块，体验不同的“发声方式”。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <a class="inline-flex items-center gap-2 rounded-xl bg-blue-600 text-white px-5 py-3 hover:bg-blue-700 transition" href="../contact/index.html">
+        <i class="fa-solid fa-comment-dots"></i>
+        <span>获取方案与报价</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="py-12">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <div class="font-semibold">AE800</div>
+          <div class="mt-3 text-sm text-slate-600" data-i18n="footer_brand_desc">数字化体验 · 展示结构 · 互动装置的整合落地供应商。把灯箱、结构与互动模块化，让空间开口说话。</div>
+        </div>
+        <div>
+          <div class="font-semibold" data-i18n="footer_quick">快速入口</div>
+          <div class="mt-3 space-y-2 text-sm">
+            <a class="footer-link" href="./index.html">能力</a>
+            <a class="footer-link" href="../solutions/index.html">解决方案</a>
+            <a class="footer-link" href="../services/index.html">服务</a>
+            <a class="footer-link" href="../products/index.html">产品</a>
+            <a class="footer-link" href="../cases/index.html">案例</a>
+            <a class="footer-link" href="../docs/index.html" data-i18n="footer_docs">投标与资料</a>
+            <a class="footer-link" href="../contact/index.html">联系</a>
+          </div>
+        </div>
+        <div>
+          <div class="font-semibold" data-i18n="footer_services">服务项目</div>
+          <div class="mt-3 space-y-2 text-sm">
+            <div class="text-slate-600" data-i18n="footer_s1">展示设计 / 装修装饰</div>
+            <div class="text-slate-600" data-i18n="footer_s2">数字多媒体 / 活动执行</div>
+            <div class="text-slate-600" data-i18n="footer_s3">市场推广 / 企业形象展示</div>
+          </div>
+        </div>
+        <div>
+          <div class="font-semibold" data-i18n="footer_contact">联系</div>
+          <div class="mt-3 space-y-2 text-sm text-slate-600">
+            <div>电话：010-66169644</div>
+            <div>邮箱：139965886@qq.com</div>
+            <div>公众号：ae800com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-slate-200 pt-6">
+        <div class="text-sm text-slate-500">Copyright © 2001 - 2025 ae800.com</div>
+        <div class="text-sm text-slate-500" data-i18n="footer_note">新站模板 · 可交互静态演示</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/main.js" defer></script>
+  <script>
+    (() => {
+      const els = Array.from(document.querySelectorAll('[data-cap-reveal]'));
+      if (!els.length) return;
+
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (!e.isIntersecting) return;
+            e.target.classList.add('is-in');
+            io.unobserve(e.target);
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -10% 0px' }
+      );
+
+      els.forEach((el) => io.observe(el));
+    })();
+
+    (() => {
+      const wrap = document.querySelector('[data-cap-demo]');
+      if (!wrap) return;
+
+      const tabs = Array.from(document.querySelectorAll('#capDemoTabs [data-step]'));
+      const nodes = Array.from(document.querySelectorAll('[data-node]'));
+      const rail = document.getElementById('capDemoRail');
+      const kicker = document.getElementById('capDemoKicker');
+      const title = document.getElementById('capDemoTitle');
+      const desc = document.getElementById('capDemoDesc');
+      const list = document.getElementById('capDemoList');
+      if (!tabs.length || !rail || !kicker || !title || !desc || !list) return;
+
+      const data = {
+        lightbox: {
+          kicker: '灯箱系统',
+          title: '灯箱系统（LightBox）',
+          desc: '灯光结构系统化：适配超薄/弧形/模块化灯箱，强调可维护、均匀光源与现场快装。',
+          points: ['超薄/弧形/模块化结构', '均匀光源与防眩处理', '可维护快拆：检修口/标准件', '适配高频更换内容的场景']
+        },
+        structure: {
+          kicker: '结构加工',
+          title: '金属结构加工',
+          desc: '异形结构与柜体加工：从深化到焊接、打磨与表面处理，保证精度与装配一致性。',
+          points: ['异形/弧形骨架与柜体', '精准焊接与打磨工艺', '表面处理：喷涂/烤漆/覆膜', '装配孔位与现场接口对齐']
+        },
+        interactive: {
+          kicker: '互动集成',
+          title: '多媒体互动系统整合',
+          desc: '硬件+内容对接：让触控/体感/翻书/投影稳定运行，强调联调与维护口径。',
+          points: ['触控/体感/电子翻书/问答墙', '设备选型与散热供电规划', '内容/接口对接与联调', '稳定性与维护：日志/远程支持']
+        },
+        turnkey: {
+          kicker: '一体化交付',
+          title: '一体化落地交付',
+          desc: '按节点管控：深化 → 制作 → 安装 → 调试 → 验收，统一口径减少返工。',
+          points: ['里程碑节点与验收口径', '现场安装组织与安全管理', '联调测试与问题闭环', '交付文档与售后保障建议']
+        }
+      };
+
+      const setActive = (key) => {
+        tabs.forEach((b) => {
+          const active = b.dataset.step === key;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-selected', String(active));
+        });
+        nodes.forEach((n) => n.classList.toggle('is-active', n.dataset.node === key));
+
+        const d = data[key] || data.lightbox;
+        kicker.textContent = `当前模块：${d.kicker}`;
+        title.textContent = d.title;
+        desc.textContent = d.desc;
+        list.innerHTML = (d.points || []).map((t) => `<li>${t}</li>`).join('');
+
+        rail.classList.remove('is-draw');
+        void rail.getBoundingClientRect();
+        rail.classList.add('is-draw');
+      };
+
+      tabs.forEach((b) => b.addEventListener('click', () => setActive(b.dataset.step || 'lightbox')));
+      nodes.forEach((n) => n.addEventListener('click', () => setActive(n.dataset.node || 'lightbox')));
+
+      setActive('lightbox');
+    })();
+
+    (() => {
+      const stage = document.querySelector('[data-motto-stage]');
+      if (!stage) return;
+
+      const buttons = Array.from(document.querySelectorAll('[data-motto-mode]'));
+      const setMode = (mode) => {
+        stage.setAttribute('data-mode', mode);
+        buttons.forEach((b) => b.classList.toggle('is-active', b.dataset.mottoMode === mode));
+      };
+
+      buttons.forEach((b) => b.addEventListener('click', () => setMode(b.dataset.mottoMode || 'light')));
+
+      const setPos = (clientX, clientY) => {
+        const r = stage.getBoundingClientRect();
+        const x = Math.max(0, Math.min(1, (clientX - r.left) / r.width));
+        const y = Math.max(0, Math.min(1, (clientY - r.top) / r.height));
+        stage.style.setProperty('--mx', `${(x * 100).toFixed(2)}%`);
+        stage.style.setProperty('--my', `${(y * 100).toFixed(2)}%`);
+      };
+
+      stage.addEventListener('pointermove', (e) => setPos(e.clientX, e.clientY));
+      stage.addEventListener('pointerdown', (e) => setPos(e.clientX, e.clientY));
+
+      let t0 = performance.now();
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const loop = (t) => {
+        if (reduce) return;
+        const dt = (t - t0) / 1000;
+        const cx = 50 + Math.cos(dt * 0.7) * 18;
+        const cy = 50 + Math.sin(dt * 0.9) * 12;
+        stage.style.setProperty('--mx', `${cx.toFixed(2)}%`);
+        stage.style.setProperty('--my', `${cy.toFixed(2)}%`);
+        requestAnimationFrame(loop);
+      };
+      requestAnimationFrame(loop);
+
+      setMode('light');
+    })();
+  </script>
+</body>
+</html>

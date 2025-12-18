@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "cases/assets"
+public_folder: "/cases/assets"
+
+collections:
+  - name: "cases"
+    label: "案例"
+    label_singular: "案例"
+    editor:
+      preview: false
+    files:
+      - name: "cases_data"
+        label: "案例数据（cases.json）"
+        file: "cases/data/cases.json"
+        format: "json"
+        fields:
+          - label: "案例列表"
+            name: "cases"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "标题", name: "title", widget: "string" }
+              - label: "分类"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "博物馆/纪念馆", value: "museum" }
+                  - { label: "大型成就展", value: "achievement" }
+                  - { label: "城市展厅/展馆", value: "city" }
+                  - { label: "标识/形象展示", value: "brand" }
+                  - { label: "商业展示", value: "retail" }
+                  - { label: "其他", value: "all" }
+              - { label: "原站分类", name: "original_category", widget: "string", required: false }
+              - { label: "地区/地址", name: "city", widget: "string", required: false }
+              - { label: "年份", name: "year", widget: "string", required: false }
+              - { label: "标签", name: "tags", widget: "list", required: false }
+              - { label: "交付范围（建议）", name: "scope", widget: "list", required: false }
+              - { label: "亮点/验收口径（建议）", name: "highlights", widget: "list", required: false }
+              - { label: "项目概述", name: "description", widget: "text", required: false }
+              - { label: "来源URL", name: "source_url", widget: "string", required: false }
+              - { label: "图片（相对路径）", name: "images", widget: "list", required: false }

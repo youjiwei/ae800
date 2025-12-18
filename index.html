@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AE800 - 数字化展陈 · 灯箱系统 · 互动装置</title>
+  <meta name="description" content="AE800 专注展览、博物馆、城市展厅与商业展示的数字体验落地制作，以灯箱系统、金属结构、多媒体互动与沉浸式场景为核心能力，提供一体化交付服务。" />
+  <link rel="canonical" href="https://www.ae800.com/" />
+  <meta property="og:title" content="AE800 - 数字化展陈 · 灯箱系统 · 互动装置" />
+  <meta property="og:description" content="灯光结构 + 多媒体互动 + 沉浸式体验的一体化落地服务商" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ae800.com/" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=70" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AE800 - 数字化展陈 · 灯箱系统 · 互动装置" />
+  <meta name="twitter:description" content="灯光结构 + 多媒体互动 + 沉浸式体验的一体化落地服务商" />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=70" />
+  <link rel="icon" href="data:," />
+  <link rel="alternate" hreflang="x-default" href="https://www.ae800.com/" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans SC', 'ui-sans-serif', 'system-ui']
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "AE800",
+          "url": "https://www.ae800.com/",
+          "telephone": "010-66169644",
+          "email": "139965886@qq.com"
+        },
+        {
+          "@type": "WebSite",
+          "name": "AE800",
+          "url": "https://www.ae800.com/",
+          "inLanguage": ["zh-CN", "en"]
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="font-sans text-slate-900 bg-slate-50">
+  <a class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:bg-white focus:px-4 focus:py-2 focus:rounded-md focus:shadow" href="#main">跳到主要内容</a>
+
+  <header class="fixed top-0 inset-x-0 z-50" id="siteHeader">
+    <div class="bg-white/80 backdrop-blur border-b border-slate-200" id="headerBar">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16">
+          <a class="flex items-center gap-3" href="./index.html" aria-label="返回首页">
+            <div class="h-9 w-9 rounded-lg bg-brand-600 text-white grid place-items-center font-bold">AE</div>
+            <div class="leading-tight">
+              <div class="font-semibold">AE800</div>
+              <div class="text-xs text-slate-500" data-i18n="brand_tagline">数字化展陈 · 灯箱系统 · 互动装置</div>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6" aria-label="主导航">
+            <a class="nav-link" href="./capabilities/index.html" data-i18n="nav_capabilities">能力</a>
+            <a class="nav-link" href="./solutions/index.html" data-i18n="nav_solutions">解决方案</a>
+            <a class="nav-link" href="./services/index.html" data-i18n="nav_services">服务</a>
+            <a class="nav-link" href="./products/index.html" data-i18n="nav_products">产品</a>
+            <a class="nav-link" href="./cases/index.html" data-i18n="nav_cases">案例</a>
+            <a class="nav-link" href="./docs/index.html" data-i18n="nav_docs">资料</a>
+            <a class="nav-link" href="./contact/index.html" data-i18n="nav_contact">联系</a>
+            <a class="btn btn-filled" href="./contact/index.html" data-cta="top">
+              <i class="fa-solid fa-comment-dots"></i>
+              <span data-i18n="nav_cta">获取方案</span>
+            </a>
+          </nav>
+
+          <button class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-slate-200 bg-white" id="mobileMenuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileMenu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobileMenu">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 pb-4">
+          <div class="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+            <a class="mobile-link" href="./capabilities/index.html" data-i18n="nav_capabilities">能力</a>
+            <a class="mobile-link" href="./solutions/index.html" data-i18n="nav_solutions">解决方案</a>
+            <a class="mobile-link" href="./services/index.html" data-i18n="nav_services">服务</a>
+            <a class="mobile-link" href="./products/index.html" data-i18n="nav_products">产品</a>
+            <a class="mobile-link" href="./cases/index.html" data-i18n="nav_cases">案例</a>
+            <a class="mobile-link" href="./docs/index.html" data-i18n="nav_docs">资料</a>
+            <a class="mobile-link" href="./contact/index.html" data-i18n="nav_contact">联系</a>
+            <div class="pt-2">
+              <a class="btn btn-filled w-full" href="./contact/index.html" data-cta="mobile">
+                <i class="fa-solid fa-phone"></i>
+                <span data-i18n="nav_cta_mobile">立即咨询</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="pt-16">
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 hero-bg"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950/10"></div>
+
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-20 md:py-24">
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-7 text-white">
+            <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm" data-i18n="hero_badge">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>2001 - 2025 · 产业链协同 · 交付可控</span>
+            </div>
+
+            <h1 class="mt-5 text-4xl sm:text-5xl font-bold leading-tight" data-i18n="hero_title">数字化展陈 · 灯箱系统 · 互动装置 · 沉浸式体验</h1>
+            <p class="mt-4 text-lg text-white/90 max-w-2xl" data-i18n="hero_subtitle">我们融合灯光结构、金属加工与数字互动，为展览、博物馆、城市展厅与商业展示提供从深化、制作到安装调试的一体化落地服务。</p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a class="btn btn-filled" href="#contact" data-cta="hero_primary">
+                <i class="fa-solid fa-file-signature"></i>
+                <span data-i18n="hero_primary">免费获取项目建议</span>
+              </a>
+              <a class="btn btn-tonal" href="./docs/index.html" data-cta="hero_secondary">
+                <i class="fa-regular fa-images"></i>
+                <span data-i18n="hero_secondary">查看服务手册</span>
+              </a>
+            </div>
+
+            <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-white/90">
+              <div class="rounded-2xl bg-white/10 p-4">
+                <div class="text-2xl font-bold"><span data-countup data-to="26" data-suffix="+">26+</span></div>
+                <div class="text-sm" data-i18n="hero_m1">结构材质设计经验</div>
+              </div>
+              <div class="rounded-2xl bg-white/10 p-4">
+                <div class="text-2xl font-bold">1v1</div>
+                <div class="text-sm" data-i18n="hero_m2">专属项目经理</div>
+              </div>
+              <div class="rounded-2xl bg-white/10 p-4">
+                <div class="text-2xl font-bold"><span data-countup data-to="20" data-suffix="年">20年</span></div>
+                <div class="text-sm" data-i18n="hero_m3">结构质保可选</div>
+              </div>
+              <div class="rounded-2xl bg-white/10 p-4">
+                <div class="text-2xl font-bold">全程</div>
+                <div class="text-sm" data-i18n="hero_m4">进度透明可控</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-5">
+            <div class="rounded-3xl bg-white p-6 shadow-xl border border-slate-200">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <div class="text-sm text-slate-500" data-i18n="lead_kicker">快速咨询</div>
+                  <div class="text-xl font-semibold" data-i18n="lead_title">30秒提交需求</div>
+                </div>
+                <div class="h-10 w-10 rounded-xl bg-brand-50 text-brand-700 grid place-items-center">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+              </div>
+
+              <form class="mt-5 space-y-4" id="leadForm" novalidate>
+                <div>
+                  <label class="block text-sm font-medium" for="name" data-i18n="lead_name">联系人</label>
+                  <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-600" id="name" name="name" autocomplete="name" data-i18n-placeholder="lead_name_ph" placeholder="请输入姓名" required />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium" for="phone" data-i18n="lead_phone">手机号</label>
+                  <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-600" id="phone" name="phone" inputmode="tel" data-i18n-placeholder="lead_phone_ph" placeholder="用于回访沟通" required />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium" for="need" data-i18n="lead_need">需求简述</label>
+                  <textarea class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-600" id="need" name="need" rows="3" data-i18n-placeholder="lead_need_ph" placeholder="如：展厅面积/工期/预算/地点/交付范围" required></textarea>
+                </div>
+
+                <button class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 text-white px-4 py-3 hover:bg-slate-800 transition" type="submit">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span data-i18n="lead_submit">提交（本地演示）</span>
+                </button>
+
+                <div class="text-xs text-slate-500" data-i18n="lead_note">本模板为静态演示：提交后会在本地生成提示，不会自动发送到服务器。</div>
+                <div class="hidden rounded-xl bg-emerald-50 text-emerald-800 px-4 py-3 text-sm" id="formSuccess" role="status"></div>
+                <div class="hidden rounded-xl bg-rose-50 text-rose-800 px-4 py-3 text-sm" id="formError" role="alert"></div>
+              </form>
+
+              <div class="mt-6 rounded-2xl bg-slate-50 p-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="text-sm text-slate-500" data-i18n="lead_phone_k">电话</div>
+                    <div class="font-semibold">010-66169644</div>
+                  </div>
+                  <a class="inline-flex items-center gap-2 text-brand-700 font-medium hover:underline" href="#contact" data-cta="phone_block">
+                    <span data-i18n="lead_more_contact">更多联系方式</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trust" class="py-16 sm:py-20 lines-bg">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <div class="text-brand-700 font-medium" data-i18n="trust_kicker">信任背书</div>
+            <h2 class="mt-2 text-3xl font-bold" data-i18n="trust_title">客户与合作伙伴（展示位）</h2>
+            <p class="mt-3 text-slate-600 max-w-2xl" data-i18n="trust_desc">这里建议放置：国家级馆展/大型展览合作单位/集成商伙伴等 LOGO（可后续替换成真实客户）。</p>
+          </div>
+          <a class="btn btn-outlined" href="./cases/index.html">
+            <span data-i18n="trust_link">查看案例证明</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4" aria-label="合作伙伴logo位">
+          <div class="logo-tile">Partner</div>
+          <div class="logo-tile">Partner</div>
+          <div class="logo-tile">Partner</div>
+          <div class="logo-tile">Partner</div>
+          <div class="logo-tile">Partner</div>
+          <div class="logo-tile">Partner</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-white border-y border-slate-200">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="flex gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-brand-50 text-brand-700 grid place-items-center"><i class="fa-solid fa-medal"></i></div>
+            <div>
+              <div class="font-semibold">专业品质</div>
+              <div class="text-sm text-slate-600">用材可追溯，按合同执行</div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-brand-50 text-brand-700 grid place-items-center"><i class="fa-solid fa-diagram-project"></i></div>
+            <div>
+              <div class="font-semibold">全程可控</div>
+              <div class="text-sm text-slate-600">专属项目经理1对1服务</div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-brand-50 text-brand-700 grid place-items-center"><i class="fa-solid fa-hard-hat"></i></div>
+            <div>
+              <div class="font-semibold">安全可靠</div>
+              <div class="text-sm text-slate-600">结构标准化，交付更放心</div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-brand-50 text-brand-700 grid place-items-center"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div>
+              <div class="font-semibold">优秀设计</div>
+              <div class="text-sm text-slate-600">经验沉淀，效果与落地一致</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="product-suites" class="py-16 sm:py-20 lines-bg">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <div class="text-brand-700 font-medium" data-i18n="suite_kicker">产品体系</div>
+            <h2 class="mt-2 text-3xl font-bold" data-i18n="suite_title">LightBox / Interactive / Immersive</h2>
+            <p class="mt-3 text-slate-600 max-w-2xl" data-i18n="suite_desc">把能力产品化：用可复用的灯箱系统、互动装置与沉浸式模块，快速组合成可落地的展示体验方案。</p>
+          </div>
+          <a class="btn btn-outlined" href="./products/index.html">
+            <span data-i18n="suite_enter_products">进入产品页</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="mt-8 flex flex-col lg:flex-row gap-6">
+          <div class="rounded-3xl bg-white border border-slate-200 p-4 lg:w-[420px]">
+            <div class="flex flex-wrap gap-2" role="tablist" aria-label="产品体系切换" id="suiteTabs">
+              <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="suitePanel" data-suite="lightbox">LightBox</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="suitePanel" data-suite="interactive">Interactive</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="suitePanel" data-suite="immersive">Immersive</button>
+            </div>
+
+            <div class="mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4" id="suitePanel" aria-live="polite">
+              <div class="font-semibold" id="suiteTitle">LightBox 系列</div>
+              <div class="mt-2 text-sm text-slate-600" id="suiteDesc">系统化灯箱结构，适合长期展馆与高频更新场景。支持快维护、快拆装，光源均匀无暗区。</div>
+              <div class="mt-4 flex flex-wrap gap-2" id="suitePills">
+                <span class="pill">UltraSlim（超薄）</span>
+                <span class="pill">CurveFlex（弧形）</span>
+                <span class="pill">MegaWall（大场景）</span>
+                <span class="pill">ECO 模块化</span>
+                <span class="pill">LightWall（光墙）</span>
+              </div>
+              <div class="mt-4 flex flex-col sm:flex-row gap-3">
+                <a class="btn btn-filled" href="#contact" data-cta="suite_to_contact">
+                  <i class="fa-solid fa-comment-dots"></i>
+                  <span data-i18n="suite_cta_scene">按场景给方案</span>
+                </a>
+                <button class="btn btn-outlined" type="button" id="openHandbookModal" data-cta="suite_open_handbook">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span data-i18n="suite_cta_handbook">预览服务手册</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 flex-1">
+            <div class="card">
+              <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+              <div class="card-title">LightBox 系列</div>
+              <div class="card-desc">UltraSlim（超薄）/ CurveFlex（弧形）/ MegaWall（大场景）/ ECO 模块化 / 光墙系统。</div>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+              <div class="card-title">Interactive 系列</div>
+              <div class="card-desc">AI Guide、电子翻书、互动问答墙、体感互动、MultiTouch Table、裸眼 3D 小屏等。</div>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="fa-solid fa-panorama"></i></div>
+              <div class="card-title">Immersive 系列</div>
+              <div class="card-desc">Mini Immersive Box / 沉浸式走廊 / 半环幕 EdgeScreen，适合入口与故事区。</div>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="fa-solid fa-file-lines"></i></div>
+              <div class="card-title">投标资料与技术章节</div>
+              <div class="card-desc">施工制作方案、工期计划、质量安全、质保售后等内容，支持在线预览与导出PDF。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a class="btn btn-filled" href="./solutions/index.html">
+            <i class="fa-solid fa-layer-group"></i>
+            <span data-i18n="suite_view_solutions">查看行业方案包</span>
+          </a>
+          <a class="btn btn-outlined" href="./capabilities/index.html">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span data-i18n="suite_view_capabilities">查看核心能力</span>
+          </a>
+          <a class="btn btn-outlined" href="./docs/index.html">
+            <i class="fa-solid fa-file-lines"></i>
+            <span data-i18n="suite_view_docs">投标与资料</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution-selector" class="py-16 sm:py-20 bg-white border-y border-slate-200 lines-bg">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <div class="text-brand-700 font-medium" data-i18n="picker_kicker">快速选型</div>
+            <h2 class="mt-2 text-3xl font-bold" data-i18n="picker_title">选择你的项目类型，我们推荐组合方案</h2>
+            <p class="mt-3 text-slate-600 max-w-2xl" data-i18n="picker_desc">根据场景类型自动推荐：灯箱系统 + 互动装置 + 沉浸式模块的组合打法，并给出下一步行动入口。</p>
+          </div>
+          <a class="btn btn-outlined" href="./solutions/index.html">
+            <span data-i18n="picker_enter_solutions">进入解决方案页</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="mt-10 grid lg:grid-cols-12 gap-6">
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl bg-white border border-slate-200 p-4">
+              <div class="grid sm:grid-cols-2 lg:grid-cols-1 gap-3" id="solutionPicker" aria-label="解决方案选择器">
+                <button class="picker-item is-active" type="button" data-solution="museum">
+                  <div class="picker-title" data-i18n="picker_museum_title">博物馆互动展项</div>
+                  <div class="picker-desc" data-i18n="picker_museum_desc">稳定运行 + 易维护 + 内容可更新</div>
+                </button>
+                <button class="picker-item" type="button" data-solution="city">
+                  <div class="picker-title" data-i18n="picker_city_title">城市展厅沉浸式</div>
+                  <div class="picker-desc" data-i18n="picker_city_desc">入口记忆点 + 故事区沉浸体验</div>
+                </button>
+                <button class="picker-item" type="button" data-solution="temp">
+                  <div class="picker-title" data-i18n="picker_temp_title">临展快装数字化</div>
+                  <div class="picker-desc" data-i18n="picker_temp_desc">快装快拆 + 可复用 + 工期可控</div>
+                </button>
+                <button class="picker-item" type="button" data-solution="retail">
+                  <div class="picker-title" data-i18n="picker_retail_title">商业展示互动</div>
+                  <div class="picker-desc" data-i18n="picker_retail_desc">引流互动 + 传播点 + 高转化</div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 p-6 sm:p-8" id="solutionResult" aria-live="polite">
+              <div class="flex items-start justify-between gap-6 flex-wrap">
+                <div>
+                  <div class="text-sm text-slate-500" id="solutionKicker" data-i18n="picker_result_kicker">推荐方案包</div>
+                  <div class="text-2xl font-bold" id="solutionTitle">博物馆互动展项方案</div>
+                </div>
+                <div class="text-sm text-slate-600" data-i18n="picker_budget">可按预算做：入门 / 标准 / 高配</div>
+              </div>
+
+              <div class="mt-4 text-slate-700" id="solutionCopy">推荐组合：展项结构 + 灯箱系统（可维护）+ AI 讲解 / 电子翻书 / 互动问答 + 氛围光影。适合馆内长期运行与内容常态更新。</div>
+
+              <div class="mt-5 flex flex-wrap gap-2" id="solutionTags">
+                <span class="pill">灯箱系统</span>
+                <span class="pill">结构柜体</span>
+                <span class="pill">AI 讲解</span>
+                <span class="pill">电子翻书</span>
+                <span class="pill">互动问答</span>
+              </div>
+
+              <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <button class="btn btn-filled" type="button" id="solutionToContact">
+                  <i class="fa-solid fa-comment-dots"></i>
+                  <span data-i18n="picker_cta_contact">把需求发给我们</span>
+                </button>
+                <a class="btn btn-outlined" href="./products/index.html">
+                  <i class="fa-solid fa-boxes-stacked"></i>
+                  <span data-i18n="picker_cta_products">查看产品体系</span>
+                </a>
+                <button class="btn btn-outlined" type="button" id="solutionOpenHandbook">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span data-i18n="picker_cta_docs">查看投标资料</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-16 sm:py-20 bg-white border-y border-slate-200">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <div class="text-brand-700 font-medium" data-i18n="svc_kicker">服务体系</div>
+            <h2 class="mt-2 text-3xl font-bold" data-i18n="svc_title">从深化到安装调试的一体化交付</h2>
+            <p class="mt-3 text-slate-600 max-w-2xl" data-i18n="svc_desc">灯箱系统定制、展项结构与柜体、互动装置集成、沉浸式场景、工程施工、数字内容对接。</p>
+          </div>
+          <a class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 hover:bg-slate-50 transition" href="./services/index.html">
+            <span data-i18n="svc_link">进入服务页</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="card-title">灯箱系统定制</div>
+            <div class="card-desc">设计 / 制作 / 安装，支持超薄、弧形、模块化与可维护系统。</div>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
+            <div class="card-title">展项结构与柜体</div>
+            <div class="card-desc">异形 / 弧形金属结构、展项外壳结构、精准焊接与打磨。</div>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-display"></i></div>
+            <div class="card-title">互动与多媒体集成</div>
+            <div class="card-desc">AI 讲解、触控、体感、电子翻书、投影与系统联调。</div>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-panorama"></i></div>
+            <div class="card-title">沉浸式场景</div>
+            <div class="card-desc">MiniBox/沉浸式通道/半环幕等模块化落地方案。</div>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <div class="card-title">展览/展厅施工</div>
+            <div class="card-desc">进场、安全文明施工、节点验收与收口交付。</div>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="card-title">数字内容对接</div>
+            <div class="card-desc">整合外包伙伴，确保内容、硬件与结构协同落地。</div>
+          </div>
+        </div>
+
+        <div class="mt-10 rounded-3xl bg-slate-50 border border-slate-200 p-6 sm:p-8">
+          <div class="flex items-start justify-between gap-6 flex-wrap">
+            <div>
+              <div class="text-brand-700 font-medium" data-i18n="assure_kicker">交付保障</div>
+              <div class="text-2xl font-bold" data-i18n="assure_title">质量 · 安全 · 质保 · 响应机制</div>
+              <div class="mt-2 text-sm text-slate-600" data-i18n="assure_desc">把投标所需的关键章节放在“资料”里：施工制作方案、工期计划、质量管理、安全文明施工、质保与售后。</div>
+            </div>
+            <a class="inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white px-4 py-2 hover:bg-brand-700 transition" href="./docs/index.html">
+              <i class="fa-solid fa-file-lines"></i>
+              <span data-i18n="assure_cta">查看投标与资料</span>
+            </a>
+          </div>
+
+          <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="mini-metric">
+              <div class="mini-metric-k" data-i18n="assure_m1k">结构质保</div>
+              <div class="mini-metric-v">1–2 Years</div>
+            </div>
+            <div class="mini-metric">
+              <div class="mini-metric-k" data-i18n="assure_m2k">互动硬件</div>
+              <div class="mini-metric-v">1 Year</div>
+            </div>
+            <div class="mini-metric">
+              <div class="mini-metric-k" data-i18n="assure_m3k">内容维护</div>
+              <div class="mini-metric-v">1 Year</div>
+            </div>
+            <div class="mini-metric">
+              <div class="mini-metric-k" data-i18n="assure_m4k">服务响应</div>
+              <div class="mini-metric-v">7×12</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="py-16 sm:py-20 bg-white border-y border-slate-200">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <div class="text-brand-700 font-medium" data-i18n="cases_kicker">精选案例</div>
+            <h2 class="mt-2 text-3xl font-bold" data-i18n="cases_title">用结果证明交付能力</h2>
+            <p class="mt-3 text-slate-600 max-w-2xl" data-i18n="cases_desc">从国家级馆展到大型成就展与公共空间项目，支持不同规模与复杂度的展陈落地。下面示例来源于现有站点案例内容整理。</p>
+          </div>
+          <a class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2 hover:bg-slate-100 transition" href="./cases/index.html">
+            <span data-i18n="cases_link">进入案例库</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center gap-2" aria-label="案例筛选">
+          <button class="filter-chip is-active" data-filter="all" type="button" data-i18n="case_filter_all">全部</button>
+          <button class="filter-chip" data-filter="museum" type="button" data-i18n="case_filter_museum">博物馆/纪念馆</button>
+          <button class="filter-chip" data-filter="exhibition" type="button" data-i18n="case_filter_exhibition">大型成就展</button>
+          <button class="filter-chip" data-filter="brand" type="button" data-i18n="case_filter_brand">标识/形象展示</button>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="caseGrid">
+          <article class="case-card" data-tags="museum">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">博物馆</div>
+              <h3 class="mt-1 font-semibold">北京奥运博物馆（升级改造）</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">主题“圆梦双奥，共创未来”，面向公众呈现“双奥之城”历史与成就，强调奥林匹克精神传播。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="https://www.ae800.com/case/112" target="_blank" rel="noreferrer">查看原站详情</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-tags="museum exhibition">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1554188572-4b09a1bfa0d8?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">大型展览</div>
+              <h3 class="mt-1 font-semibold">北京大兴国际机场爱国主义教育示范基地</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">“凤凰展翅逐梦蓝天”，位于航站楼三层安检后，分为序厅、正厅、尾厅，占地约1260㎡。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="https://www.ae800.com/case/116" target="_blank" rel="noreferrer">查看原站详情</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-tags="exhibition">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">大型成就展</div>
+              <h3 class="mt-1 font-semibold">“砥砺奋进的五年”大型成就展</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">2017年北京展览馆开幕，展期两个月，展示过去五年重大成就与发展。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="https://www.ae800.com/case/77" target="_blank" rel="noreferrer">查看原站详情</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-tags="museum">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">纪念馆</div>
+              <h3 class="mt-1 font-semibold">《南京大屠杀史实展》</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">2017年12月13日开幕，通过多种形式呈现历史事实与影响，面向公众教育传播。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="https://www.ae800.com/case/97" target="_blank" rel="noreferrer">查看原站详情</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-tags="brand">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1582719478171-2ff0c7fd7f7f?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">标识/形象</div>
+              <h3 class="mt-1 font-semibold">导视标识与形象展示（示例）</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">面向园区/展馆/公共空间，提供导视系统、形象墙、发光字等一体化制作与安装。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="./products/index.html">查看产品方向</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-tags="museum exhibition">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">馆展实施</div>
+              <h3 class="mt-1 font-semibold">复兴之路·新时代部分（示例）</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">以展陈叙事、展项制作与现场实施为核心，确保设计-技术-施工的系统推演与落地。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="https://www.ae800.com/case/96" target="_blank" rel="noreferrer">查看原站详情</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-12 gap-10 items-start">
+          <div class="lg:col-span-5">
+            <div class="text-brand-700 font-medium" data-i18n="adv_kicker">为什么选择我们</div>
+            <h2 class="mt-2 text-3xl font-bold" data-i18n="adv_title">把“不确定”变成“可控”</h2>
+            <p class="mt-3 text-slate-600" data-i18n="adv_desc">对甲方而言，最难的是多方协作、现场不可控与质量风险。我们把交付拆解为清晰流程和可复用标准，让沟通更省心、验收更顺畅。</p>
+
+            <div class="mt-6 space-y-3">
+              <div class="rounded-2xl bg-white border border-slate-200 p-5">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-xl bg-brand-50 text-brand-700 grid place-items-center"><i class="fa-solid fa-cubes"></i></div>
+                  <div>
+                    <div class="font-semibold" data-i18n="adv_i1_t">真材实料 · 按合同执行</div>
+                    <div class="text-sm text-slate-600" data-i18n="adv_i1_d">为您匹配性价比与合规性更优的材质方案，过程留痕。</div>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-2xl bg-white border border-slate-200 p-5">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-xl bg-brand-50 text-brand-700 grid place-items-center"><i class="fa-solid fa-route"></i></div>
+                  <div>
+                    <div class="font-semibold" data-i18n="adv_i2_t">全程可控 · 专属对接</div>
+                    <div class="text-sm text-slate-600" data-i18n="adv_i2_d">对接甲方、装修方及第三方，减少信息损耗与返工。</div>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-2xl bg-white border border-slate-200 p-5">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-xl bg-brand-50 text-brand-700 grid place-items-center"><i class="fa-solid fa-star"></i></div>
+                  <div>
+                    <div class="font-semibold" data-i18n="adv_i3_t">品质出众 · 可验收标准</div>
+                    <div class="text-sm text-slate-600" data-i18n="adv_i3_d">关键节点设定验收口径，交付质量更可预期。</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="rounded-3xl bg-white border border-slate-200 p-6 sm:p-8 shadow-sm">
+              <div class="flex items-start justify-between gap-6 flex-wrap">
+                <div>
+                  <div class="text-sm text-slate-500" data-i18n="scene_kicker">适用场景</div>
+                  <div class="text-2xl font-bold" data-i18n="scene_title">你更适合哪种合作方式？</div>
+                </div>
+                <div class="text-sm text-slate-600" data-i18n="scene_hint">点击卡片查看建议</div>
+              </div>
+
+              <div class="mt-6 grid sm:grid-cols-2 gap-5" id="scenarioGrid">
+                <button class="scenario" type="button" data-scenario="design">
+                  <div class="scenario-title" data-i18n="scene_design_t">只有需求概念，需要方案与预算</div>
+                  <div class="scenario-desc" data-i18n="scene_design_d">建议：先做需求澄清与概念方案，形成清单与估算区间。</div>
+                </button>
+                <button class="scenario" type="button" data-scenario="build">
+                  <div class="scenario-title" data-i18n="scene_build_t">已有设计图纸，需要深化+施工落地</div>
+                  <div class="scenario-desc" data-i18n="scene_build_d">建议：做图纸审查与施工深化，排除现场风险点。</div>
+                </button>
+                <button class="scenario" type="button" data-scenario="turnkey">
+                  <div class="scenario-title" data-i18n="scene_turnkey_t">需要设计+施工+多媒体一体化交付</div>
+                  <div class="scenario-desc" data-i18n="scene_turnkey_d">建议：以里程碑节点管控工期与质量，统一验收口径。</div>
+                </button>
+                <button class="scenario" type="button" data-scenario="event">
+                  <div class="scenario-title" data-i18n="scene_event_t">时间紧，需要活动/开幕执行</div>
+                  <div class="scenario-desc" data-i18n="scene_event_d">建议：先定关键节点与物料清单，设立现场统筹机制。</div>
+                </button>
+              </div>
+
+              <div class="mt-6 hidden rounded-2xl bg-brand-50 p-5" id="scenarioResult" role="status" aria-live="polite"></div>
+
+              <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 text-white px-5 py-3 hover:bg-brand-700 transition" href="#contact" data-cta="scenario_to_contact">
+                  <i class="fa-solid fa-comments"></i>
+                  <span data-i18n="scene_cta_contact">把你的项目发给我们</span>
+                </a>
+                <a class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 hover:bg-slate-50 transition" href="./products/index.html">
+                  <i class="fa-solid fa-boxes-stacked"></i>
+                  <span data-i18n="scene_cta_products">查看产品与工艺方向</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="py-16 sm:py-20 bg-white border-y border-slate-200">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="text-center">
+          <div class="text-brand-700 font-medium" data-i18n="proc_kicker">交付流程</div>
+          <h2 class="mt-2 text-3xl font-bold" data-i18n="proc_title">从沟通到验收的标准路径</h2>
+          <p class="mt-3 text-slate-600 max-w-3xl mx-auto" data-i18n="proc_desc">把复杂项目拆解成可复用流程：需求明确、方案可比、节点可验收。让你能掌握节奏，不被现场“随机事件”牵着走。</p>
+        </div>
+
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="step">
+            <div class="step-badge">01</div>
+            <div class="step-title" data-i18n="proc_s1_t">需求澄清</div>
+            <div class="step-desc" data-i18n="proc_s1_d">明确目标、受众、空间条件、预算区间与工期节点。</div>
+          </div>
+          <div class="step">
+            <div class="step-badge">02</div>
+            <div class="step-title" data-i18n="proc_s2_t">方案设计/深化</div>
+            <div class="step-desc" data-i18n="proc_s2_d">空间叙事、效果图、材料清单与施工图深化，降低落地偏差。</div>
+          </div>
+          <div class="step">
+            <div class="step-badge">03</div>
+            <div class="step-title" data-i18n="proc_s3_t">制作施工</div>
+            <div class="step-desc" data-i18n="proc_s3_d">材料进场验收、过程留痕，关键节点对齐验收口径。</div>
+          </div>
+          <div class="step">
+            <div class="step-badge">04</div>
+            <div class="step-title" data-i18n="proc_s4_t">联调交付</div>
+            <div class="step-desc" data-i18n="proc_s4_d">设备联调、现场收口与最终验收；交付资料与维护建议。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <div class="text-brand-700 font-medium" data-i18n="home_faq_kicker">FAQ</div>
+            <h2 class="mt-2 text-3xl font-bold" data-i18n="home_faq_title">甲方常见问题</h2>
+            <p class="mt-3 text-slate-600 max-w-2xl" data-i18n="home_faq_desc">把沟通中最常见的关键问题先说清楚：预算、周期、交付物、验收标准与协作方式。</p>
+          </div>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-2 gap-6" id="faqList">
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false" data-i18n="home_faq_q1">如何快速获得一个可执行的预算范围？</button>
+            <div class="faq-a" hidden data-i18n="home_faq_a1">建议你提供：空间/面积、工期节点、期望效果参考与交付范围（设计/施工/多媒体）。我们会输出“清单化估算”与风险项说明，便于决策。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false" data-i18n="home_faq_q2">设计效果如何保证落地一致？</button>
+            <div class="faq-a" hidden data-i18n="home_faq_a2">通过深化图纸、材料样板确认、关键节点验收口径，以及过程留痕管理，将“效果偏差”提前在图纸和样板阶段消化。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false" data-i18n="home_faq_q3">工期紧怎么保证现场不失控？</button>
+            <div class="faq-a" hidden data-i18n="home_faq_a3">优先锁定关键里程碑（进场/隐蔽/安装/联调/验收），提前排程物料与人力，并设置“不可更改节点”。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false" data-i18n="home_faq_q4">可以只做施工或只做部分展项吗？</button>
+            <div class="faq-a" hidden data-i18n="home_faq_a4">可以。支持从单项制作安装到整体承包。建议先做技术审查，确保接口边界清晰，降低返工风险。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 sm:py-20 bg-white border-y border-slate-200">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-5">
+            <div class="text-brand-700 font-medium" data-i18n="contact_kicker">联系我们</div>
+            <h2 class="mt-2 text-3xl font-bold" data-i18n="contact_title">把需求说清楚，我们把方案做落地</h2>
+            <p class="mt-3 text-slate-600" data-i18n="contact_desc">你可以通过电话/邮箱/微信联系，也可以提交需求表单。若你希望我们更快评估，请写清：地点、面积、工期、预算区间与交付范围。</p>
+
+            <div class="mt-8 space-y-4">
+              <div class="contact-row">
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <div class="text-sm text-slate-500" data-i18n="contact_row_phone">电话</div>
+                  <div class="font-semibold">010-66169644</div>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <div class="text-sm text-slate-500" data-i18n="contact_row_email">邮箱</div>
+                  <div class="font-semibold">139965886@qq.com</div>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-icon"><i class="fa-brands fa-weixin"></i></div>
+                <div>
+                  <div class="text-sm text-slate-500" data-i18n="contact_row_wechat">微信公众号</div>
+                  <div class="font-semibold">ae800com</div>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <div class="text-sm text-slate-500" data-i18n="contact_row_addr">地址</div>
+                  <div class="font-semibold">北京市朝阳区东坝七棵树创意园 C8-3</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 rounded-3xl bg-slate-50 border border-slate-200 p-6">
+              <div class="font-semibold" data-i18n="contact_tip_title">下一步建议</div>
+              <div class="mt-2 text-sm text-slate-600" data-i18n="contact_tip_desc">如果你现在能提供 4 项信息（面积/工期/地点/预算），我可以把“首页文案”进一步细化成适配你业务的版本，并补齐服务详情页的交付物清单。</div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="rounded-3xl bg-white border border-slate-200 p-6 sm:p-8 shadow-sm">
+              <div class="flex items-start justify-between gap-6 flex-wrap">
+                <div>
+                  <div class="text-sm text-slate-500" data-i18n="contact_form_kicker">需求表单</div>
+                  <div class="text-2xl font-bold" data-i18n="contact_form_title">快速提交（静态演示）</div>
+                </div>
+                <a class="text-brand-700 font-medium hover:underline" href="./contact/index.html" data-i18n="contact_form_link">进入联系页</a>
+              </div>
+
+              <form class="mt-6 grid sm:grid-cols-2 gap-4" id="contactForm" novalidate>
+                <div>
+                  <label class="block text-sm font-medium" for="cname" data-i18n="contact_name">联系人</label>
+                  <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-600" id="cname" name="cname" required />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium" for="cphone" data-i18n="contact_phone">手机号</label>
+                  <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-600" id="cphone" name="cphone" inputmode="tel" required />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block text-sm font-medium" for="cemail" data-i18n="contact_email">邮箱（可选）</label>
+                  <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-600" id="cemail" name="cemail" type="email" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block text-sm font-medium" for="cmsg" data-i18n="contact_msg">需求描述</label>
+                  <textarea class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-600" id="cmsg" name="cmsg" rows="4" required></textarea>
+                </div>
+                <div class="sm:col-span-2">
+                  <button class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 text-white px-5 py-3 hover:bg-brand-700 transition" type="submit">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span data-i18n="contact_submit">提交需求</span>
+                  </button>
+                </div>
+                <div class="sm:col-span-2 hidden rounded-xl bg-emerald-50 text-emerald-800 px-4 py-3 text-sm" id="contactSuccess" role="status"></div>
+                <div class="sm:col-span-2 hidden rounded-xl bg-rose-50 text-rose-800 px-4 py-3 text-sm" id="contactError" role="alert"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <div class="font-semibold">AE800</div>
+          <div class="mt-3 text-sm text-slate-600" data-i18n="footer_brand_desc">数字化体验 · 展示结构 · 互动装置的整合落地供应商。把灯箱、结构与互动模块化，让空间开口说话。</div>
+        </div>
+        <div>
+          <div class="font-semibold" data-i18n="footer_quick">快速入口</div>
+          <div class="mt-3 space-y-2 text-sm">
+            <a class="footer-link" href="./capabilities/index.html">能力</a>
+            <a class="footer-link" href="./solutions/index.html">解决方案</a>
+            <a class="footer-link" href="./services/index.html">服务</a>
+            <a class="footer-link" href="./products/index.html">产品</a>
+            <a class="footer-link" href="./cases/index.html">案例</a>
+            <a class="footer-link" href="./docs/index.html" data-i18n="footer_docs">投标与资料</a>
+            <a class="footer-link" href="./contact/index.html">联系</a>
+          </div>
+        </div>
+        <div>
+          <div class="font-semibold" data-i18n="footer_services">服务项目</div>
+          <div class="mt-3 space-y-2 text-sm">
+            <div class="text-slate-600" data-i18n="footer_s1">展示设计 / 装修装饰</div>
+            <div class="text-slate-600" data-i18n="footer_s2">数字多媒体 / 活动执行</div>
+            <div class="text-slate-600" data-i18n="footer_s3">市场推广 / 企业形象展示</div>
+          </div>
+        </div>
+        <div>
+          <div class="font-semibold" data-i18n="footer_contact">联系</div>
+          <div class="mt-3 space-y-2 text-sm text-slate-600">
+            <div>电话：010-66169644</div>
+            <div>邮箱：139965886@qq.com</div>
+            <div>公众号：ae800com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-slate-200 pt-6">
+        <div class="text-sm text-slate-500">Copyright © 2001 - 2025 ae800.com</div>
+        <div class="text-sm text-slate-500" data-i18n="footer_note">新站模板 · 可交互静态演示</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="回到顶部">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <div class="modal hidden" id="handbookModal" role="dialog" aria-modal="true" aria-label="公司服务手册预览">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-panel" role="document">
+      <div class="modal-header">
+        <div>
+          <div class="text-sm text-slate-500" data-i18n="modal_kicker">投标与资料</div>
+          <div class="font-semibold" data-i18n="modal_title">A｜公司服务手册（在线预览）</div>
+        </div>
+        <button class="modal-close" type="button" aria-label="关闭" data-modal-close>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe title="公司服务手册" src="./handbook/handbook.html"></iframe>
+      </div>
+      <div class="modal-footer">
+        <a class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 text-white px-4 py-2 hover:bg-brand-700 transition" href="./docs/index.html">
+          <i class="fa-solid fa-arrow-right"></i>
+          <span data-i18n="modal_to_docs">去资料页</span>
+        </a>
+        <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 hover:bg-slate-50 transition" type="button" data-modal-close>
+          <span data-i18n="modal_close">关闭</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/main.js" defer></script>
+</body>
+</html>

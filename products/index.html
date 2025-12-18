@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>产品中心 - AE800</title>
+  <meta name="description" content="LightBox、Interactive、Immersive 三大产品线：适用场景、优势、交付范围、规格对比与FAQ。" />
+  <link rel="canonical" href="https://www.ae800.com/products/" />
+  <meta property="og:title" content="产品中心 - AE800" />
+  <meta property="og:description" content="LightBox、Interactive、Immersive 三大产品线：适用场景、优势、交付范围、规格对比与FAQ。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ae800.com/products/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=70" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="产品中心 - AE800" />
+  <meta name="twitter:description" content="LightBox、Interactive、Immersive 三大产品线：适用场景、优势、交付范围、规格对比与FAQ。" />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=70" />
+  <link rel="icon" href="data:," />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "产品中心 - AE800",
+      "url": "https://www.ae800.com/products/",
+      "inLanguage": ["zh-CN", "en"],
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://www.ae800.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "产品中心",
+            "item": "https://www.ae800.com/products/"
+          }
+        ]
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-slate-900 bg-slate-50">
+  <style>
+    .prod-matrix{border-collapse:collapse;width:100%;}
+    .prod-matrix th,.prod-matrix td{padding:.7rem .75rem;border-top:1px solid #e2e8f0;vertical-align:top;}
+    .prod-matrix thead th{background:#f8fafc;color:#334155;font-weight:600;border-top:none;}
+    .prod-matrix td{color:#475569;font-size:13px;}
+    .prod-bar{height:10px;border-radius:999px;background:rgba(148,163,184,.35);overflow:hidden;}
+    .prod-bar>span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0ea5e9,#2563eb);width:0;}
+    .prod-bar[data-v="1"]>span{width:20%;}
+    .prod-bar[data-v="2"]>span{width:40%;}
+    .prod-bar[data-v="3"]>span{width:60%;}
+    .prod-bar[data-v="4"]>span{width:80%;}
+    .prod-bar[data-v="5"]>span{width:100%;}
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50" id="siteHeader">
+    <div class="bg-white/80 backdrop-blur border-b border-slate-200" id="headerBar">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16">
+          <a class="flex items-center gap-3" href="../index.html" aria-label="返回首页">
+            <div class="h-9 w-9 rounded-lg bg-brand-600 text-white grid place-items-center font-bold">AE</div>
+            <div class="leading-tight">
+              <div class="font-semibold">AE800</div>
+              <div class="text-xs text-slate-500" data-i18n="brand_tagline">数字化展陈 · 灯箱系统 · 互动装置</div>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6" aria-label="主导航">
+            <a class="nav-link" href="../capabilities/index.html" data-i18n="nav_capabilities">能力</a>
+            <a class="nav-link" href="../solutions/index.html" data-i18n="nav_solutions">解决方案</a>
+            <a class="nav-link" href="../services/index.html" data-i18n="nav_services">服务</a>
+            <a class="nav-link" href="./index.html" data-i18n="nav_products">产品</a>
+            <a class="nav-link" href="../cases/index.html" data-i18n="nav_cases">案例</a>
+            <a class="nav-link" href="../docs/index.html" data-i18n="nav_docs">资料</a>
+            <a class="nav-link" href="../contact/index.html" data-i18n="nav_contact">联系</a>
+            <a class="btn btn-filled" href="../contact/index.html" data-cta="top">
+              <i class="fa-solid fa-comment-dots"></i>
+              <span data-i18n="nav_cta">获取方案</span>
+            </a>
+          </nav>
+
+          <button class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-slate-200 bg-white" id="mobileMenuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileMenu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobileMenu">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 pb-4">
+          <div class="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+            <a class="mobile-link" href="../capabilities/index.html" data-i18n="nav_capabilities">能力</a>
+            <a class="mobile-link" href="../solutions/index.html" data-i18n="nav_solutions">解决方案</a>
+            <a class="mobile-link" href="../services/index.html" data-i18n="nav_services">服务</a>
+            <a class="mobile-link" href="./index.html" data-i18n="nav_products">产品</a>
+            <a class="mobile-link" href="../cases/index.html" data-i18n="nav_cases">案例</a>
+            <a class="mobile-link" href="../docs/index.html" data-i18n="nav_docs">资料</a>
+            <a class="mobile-link" href="../contact/index.html" data-i18n="nav_contact">联系</a>
+            <div class="pt-2">
+              <a class="btn btn-filled w-full" href="../contact/index.html" data-cta="mobile">
+                <i class="fa-solid fa-phone"></i>
+                <span data-i18n="nav_cta_mobile">立即咨询</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 sm:px-6 py-10 pt-16">
+    <div class="flex items-end justify-between gap-6 flex-wrap">
+      <div>
+        <h1 class="text-3xl font-bold" data-i18n="prod_title">产品中心</h1>
+        <p class="mt-3 text-slate-600 max-w-3xl" data-i18n="prod_subtitle">把能力产品化为三条产品线：LightBox（灯箱系统）、Interactive（互动装置）、Immersive（沉浸式场景）。本页提供选型、对比与交付口径，便于报价与落地。</p>
+      </div>
+      <a class="btn btn-filled" href="../contact/index.html">
+        <i class="fa-solid fa-comment-dots"></i>
+        <span data-i18n="prod_cta">咨询方案与报价</span>
+      </a>
+    </div>
+
+    <div class="mt-6 subnav" aria-label="页面导航">
+      <a class="subnav-link" href="#overview" data-i18n="prod_nav_overview">概览</a>
+      <a class="subnav-link" href="#selector" data-i18n="prod_nav_selector">系列切换</a>
+      <a class="subnav-link" href="#compare" data-i18n="prod_nav_compare">规格对比</a>
+      <a class="subnav-link" href="#deliver" data-i18n="prod_nav_deliver">交付范围</a>
+      <a class="subnav-link" href="#faq" data-i18n="prod_nav_faq">FAQ</a>
+    </div>
+
+    <section id="overview" class="mt-8 grid lg:grid-cols-3 gap-6">
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <div class="card-title">⭐ LightBox</div>
+        <div class="card-desc" data-i18n="prod_overview_lightbox">超薄/弧形/模块化/光墙系统。适合长期展馆、导览与高频内容更换。</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+        <div class="card-title">⭐ Interactive</div>
+        <div class="card-desc" data-i18n="prod_overview_interactive">AI讲解、电子翻书、问答墙、体感与多点触控桌。强调稳定运行与内容对接。</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-panorama"></i></div>
+        <div class="card-title">⭐ Immersive</div>
+        <div class="card-desc" data-i18n="prod_overview_immersive">MiniBox/沉浸式走廊/半环幕。适合入口记忆点与故事区沉浸叙事。</div>
+      </div>
+    </section>
+
+    <section class="mt-10 rounded-3xl bg-white border border-slate-200 p-6" aria-label="产品图表化选型">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <div>
+          <h2 class="text-xl font-bold">图表化选型</h2>
+          <p class="mt-2 text-sm text-slate-600">用“矩阵 + 指标对比”先把口径对齐，后续再按项目补齐尺寸/型号/数量。</p>
+        </div>
+        <a class="btn btn-outlined" href="../contact/index.html">要一份选型清单</a>
+      </div>
+
+      <div class="mt-6 grid lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-7">
+          <div class="text-sm font-semibold text-slate-900">产品矩阵（示例）</div>
+          <div class="mt-3 overflow-auto rounded-2xl border border-slate-200">
+            <table class="prod-matrix">
+              <thead>
+                <tr>
+                  <th class="text-left">维度</th>
+                  <th class="text-left">LightBox</th>
+                  <th class="text-left">Interactive</th>
+                  <th class="text-left">Immersive</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-medium text-slate-700">最适合的场景</td>
+                  <td>长期驻展/导视信息墙</td>
+                  <td>研学互动/传播点位</td>
+                  <td>入口记忆点/叙事动线</td>
+                </tr>
+                <tr>
+                  <td class="font-medium text-slate-700">核心价值</td>
+                  <td>稳定观感 + 可维护</td>
+                  <td>人机闭环 + 内容联动</td>
+                  <td>氛围沉浸 + 情绪叙事</td>
+                </tr>
+                <tr>
+                  <td class="font-medium text-slate-700">主要成本</td>
+                  <td>模组/光学/结构</td>
+                  <td>硬件/联调/运维</td>
+                  <td>结构/设备/联动</td>
+                </tr>
+                <tr>
+                  <td class="font-medium text-slate-700">交付方式建议</td>
+                  <td>先结构接口后灯具</td>
+                  <td>先原型验证后量产</td>
+                  <td>先动线脚本后设备</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="text-sm font-semibold text-slate-900">指标对比（示例）</div>
+          <div class="mt-3 grid gap-4">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <div class="text-xs text-slate-500">内容依赖</div>
+              <div class="mt-2 grid gap-2">
+                <div class="flex items-center justify-between text-xs"><span>LightBox</span><span>低</span></div>
+                <div class="prod-bar" data-v="1"><span></span></div>
+                <div class="flex items-center justify-between text-xs"><span>Interactive</span><span>中</span></div>
+                <div class="prod-bar" data-v="3"><span></span></div>
+                <div class="flex items-center justify-between text-xs"><span>Immersive</span><span>中</span></div>
+                <div class="prod-bar" data-v="3"><span></span></div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <div class="text-xs text-slate-500">长期维护压力</div>
+              <div class="mt-2 grid gap-2">
+                <div class="flex items-center justify-between text-xs"><span>LightBox</span><span>低</span></div>
+                <div class="prod-bar" data-v="2"><span></span></div>
+                <div class="flex items-center justify-between text-xs"><span>Interactive</span><span>高</span></div>
+                <div class="prod-bar" data-v="5"><span></span></div>
+                <div class="flex items-center justify-between text-xs"><span>Immersive</span><span>中</span></div>
+                <div class="prod-bar" data-v="4"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <div class="font-semibold">优先选 LightBox</div>
+          <div class="mt-2 text-sm text-slate-600">信息密度高、长期驻展、需要可维护与稳定观感。</div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <div class="font-semibold">优先选 Interactive</div>
+          <div class="mt-2 text-sm text-slate-600">需要互动传播点位、研学体验、并发与异常兜底重要。</div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <div class="font-semibold">优先选 Immersive</div>
+          <div class="mt-2 text-sm text-slate-600">需要入口记忆点与故事叙事，强调动线与氛围一致性。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="selector" class="mt-10 grid lg:grid-cols-12 gap-6">
+      <div class="lg:col-span-5">
+        <div class="rounded-3xl bg-white border border-slate-200 p-4" style="border-radius:var(--radius)">
+          <div class="flex flex-wrap gap-2" role="tablist" aria-label="Product Series" id="productTabs">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-product="lightbox">LightBox</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-product="interactive">Interactive</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-product="immersive">Immersive</button>
+          </div>
+
+          <div class="mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-5" style="border-radius:var(--radius)">
+            <div class="text-sm text-slate-500" data-i18n="prod_panel_kicker">当前选择</div>
+            <div class="text-2xl font-bold" id="productTitle">LightBox</div>
+            <div class="mt-2 text-slate-700" id="productDesc">系统化灯箱结构体系，支持快维护、快拆装与均匀光源。</div>
+            <div class="mt-4">
+              <div class="font-semibold" data-i18n="prod_panel_usecases">适用场景</div>
+              <ul class="mt-2 list-disc pl-5 text-sm text-slate-600" id="productUsecases"></ul>
+            </div>
+            <div class="mt-4">
+              <div class="font-semibold" data-i18n="prod_panel_adv">核心优势</div>
+              <ul class="mt-2 list-disc pl-5 text-sm text-slate-600" id="productAdvantages"></ul>
+            </div>
+            <div class="mt-5 flex flex-col sm:flex-row gap-3">
+              <a class="btn btn-filled" href="../contact/index.html">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span data-i18n="prod_panel_cta">按项目给清单化报价</span>
+              </a>
+              <a class="btn btn-outlined" href="../docs/index.html">
+                <i class="fa-solid fa-file-lines"></i>
+                <span data-i18n="prod_panel_docs">查看投标与资料</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="card">
+          <div class="card-title" data-i18n="prod_panel_modules">常用模块/型号</div>
+          <div class="mt-3 flex flex-wrap gap-2" id="productPills"></div>
+          <div class="mt-6">
+            <div class="card-title" data-i18n="prod_panel_deliver">交付范围（默认）</div>
+            <ul class="mt-3 list-disc pl-5 text-sm text-slate-600" id="productDeliverables"></ul>
+          </div>
+        </div>
+
+        <div class="card mt-6">
+          <div class="flex items-start justify-between gap-6 flex-wrap">
+            <div>
+              <div class="card-title" data-i18n="prod_chart_title">系列画像与成本构成（示例）</div>
+              <div class="mt-1 text-sm text-slate-600" data-i18n="prod_chart_desc">用于沟通口径：切换系列后，图表与动画会同步更新。实际以项目条件为准。</div>
+            </div>
+          </div>
+
+          <div class="mt-6 grid md:grid-cols-2 gap-6">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5" style="border-radius:var(--radius)">
+              <div class="text-sm font-semibold text-slate-900" data-i18n="prod_chart_radar">交付画像（示例）</div>
+              <div class="mt-3" id="productRadar" style="height:240px;"></div>
+            </div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5" style="border-radius:var(--radius)">
+              <div class="text-sm font-semibold text-slate-900" data-i18n="prod_chart_cost">成本构成（示例）</div>
+              <div class="mt-3" id="productCost"></div>
+              <div class="mt-3 grid grid-cols-2 gap-2 text-xs text-slate-600" id="productCostLegend"></div>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-2xl bg-slate-50 border border-slate-200 p-5" style="border-radius:var(--radius)">
+            <div class="text-sm font-semibold text-slate-900" data-i18n="prod_anim_title">小动画演示：交付流程循环高亮</div>
+            <div class="mt-2 text-sm text-slate-600" data-i18n="prod_anim_desc">用于演示“节点可控”的交付节奏；不同系列对流程侧重点略有不同。</div>
+            <div class="mt-4" id="productFlowAnim"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="mt-10">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <div>
+          <div class="text-brand-700 font-medium" data-i18n="prod_compare_kicker">规格与选型</div>
+          <h2 class="mt-2 text-2xl font-bold" data-i18n="prod_compare_title">产品线对比（示例模板）</h2>
+          <p class="mt-2 text-slate-600" data-i18n="prod_compare_desc">用于投标与沟通的口径模板：可按项目补齐尺寸/材料/功耗/设备型号等明细。</p>
+        </div>
+      </div>
+
+      <div class="mt-4 data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th data-i18n="prod_compare_col1">维度</th>
+              <th>LightBox</th>
+              <th>Interactive</th>
+              <th>Immersive</th>
+            </tr>
+          </thead>
+          <tbody id="productCompareBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="deliver" class="mt-10">
+      <div class="rounded-3xl bg-slate-50 border border-slate-200 p-6 sm:p-8" style="border-radius:var(--radius)">
+        <div class="text-brand-700 font-medium" data-i18n="prod_deliver_kicker">交付口径</div>
+        <h2 class="mt-2 text-2xl font-bold" data-i18n="prod_deliver_title">从深化到安装调试的一体化交付</h2>
+        <p class="mt-2 text-slate-600" data-i18n="prod_deliver_desc">默认交付包含：深化设计、结构制作、设备集成、现场安装、联调测试与验收资料。也支持单项分包。</p>
+
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="mini-metric"><div class="mini-metric-k" data-i18n="prod_deliver_m1">深化设计</div><div class="mini-metric-v">Detailing</div></div>
+          <div class="mini-metric"><div class="mini-metric-k" data-i18n="prod_deliver_m2">结构制作</div><div class="mini-metric-v">Fabrication</div></div>
+          <div class="mini-metric"><div class="mini-metric-k" data-i18n="prod_deliver_m3">安装调试</div><div class="mini-metric-v">Install & Commission</div></div>
+          <div class="mini-metric"><div class="mini-metric-k" data-i18n="prod_deliver_m4">质保售后</div><div class="mini-metric-v">Warranty</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="related-cases" class="mt-10">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <div>
+          <div class="text-brand-700 font-medium" data-i18n="prod_cases_kicker">相关案例</div>
+          <h2 class="mt-2 text-2xl font-bold" data-i18n="prod_cases_title">按系列推荐参考项目</h2>
+          <p class="mt-2 text-slate-600" data-i18n="prod_cases_desc">根据当前选择的产品线，推荐更匹配的案例方向（示例链接可后续替换为真实项目）。</p>
+        </div>
+        <a class="btn btn-outlined" href="../cases/index.html">
+          <i class="fa-solid fa-layer-group"></i>
+          <span data-i18n="prod_cases_cta">进入案例库</span>
+        </a>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6" id="productCases"></div>
+    </section>
+
+    <section id="faq" class="mt-10">
+      <div class="text-brand-700 font-medium" data-i18n="prod_faq_kicker">FAQ</div>
+      <h2 class="mt-2 text-2xl font-bold" data-i18n="prod_faq_title">产品常见问题</h2>
+      <div class="mt-4 grid md:grid-cols-2 gap-6" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" data-i18n="prod_faq_q1">如何快速获得报价范围？</button>
+          <div class="faq-a" hidden data-i18n="prod_faq_a1">提供场地类型、面积、工期节点、预算区间与交付范围（灯箱/结构/互动/沉浸式），我们输出清单化估算与风险项。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" data-i18n="prod_faq_q2">如何保证长期稳定运行与维护？</button>
+          <div class="faq-a" hidden data-i18n="prod_faq_a2">通过模块化结构、可维护设计、关键设备选型与联调测试，并提供验收资料与维护建议。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" data-i18n="prod_faq_q3">可以只做结构或只做互动吗？</button>
+          <div class="faq-a" hidden data-i18n="prod_faq_a3">可以。支持单项制作或集成总包。建议先做接口边界与技术审查，降低返工。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" data-i18n="prod_faq_q4">投标资料在哪里？</button>
+          <div class="faq-a" hidden data-i18n="prod_faq_a4">资料页包含：施工制作方案、工期计划、质量管理、安全文明施工、质保与售后等章节，可在线预览。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" data-i18n="prod_faq_q5">如何拆分预算？哪些费用最影响总价？</button>
+          <div class="faq-a" hidden data-i18n="prod_faq_a5">一般可按结构/面材/光源、设备与软件、内容制作与联调、运输与安装等拆分。影响总价最大的通常是尺寸与数量、设备档位、内容复杂度与工期窗口。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" data-i18n="prod_faq_q6">甲方/设计方需要提供哪些接口资料？</button>
+          <div class="faq-a" hidden data-i18n="prod_faq_a6">建议提供平面/立面/点位图、供电与弱电条件、设备间位置、内容/中控接口要求、现场进场与施工窗口。我们也可先做踏勘与接口清单确认。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" data-i18n="prod_faq_q7">质保与售后怎么做？坏了谁来修？</button>
+          <div class="faq-a" hidden data-i18n="prod_faq_a7">我们默认提供结构与关键设备的质保建议，可按项目选择延保。交付时会提供备件建议、维护口径与巡检清单，出现故障可按 SLA 响应，支持远程排障/现场处理。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" data-i18n="prod_faq_q8">工期紧怎么控风险？有哪些“必须提前确认”的点？</button>
+          <div class="faq-a" hidden data-i18n="prod_faq_a8">优先锁定：开幕/验收节点、现场条件（尺寸/供电/遮光/网络）、关键设备到货周期、联调窗口与不可更改节点。我们会提供倒排计划与风险点清单。</div>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <a class="btn btn-tonal" href="../docs/index.html">
+          <i class="fa-solid fa-file-lines"></i>
+          <span data-i18n="prod_faq_docs">进入资料页</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <div class="font-semibold">AE800</div>
+          <div class="mt-3 text-sm text-slate-600" data-i18n="footer_brand_desc">数字化体验 · 展示结构 · 互动装置的整合落地供应商。把灯箱、结构与互动模块化，让空间开口说话。</div>
+        </div>
+        <div>
+          <div class="font-semibold" data-i18n="footer_quick">快速入口</div>
+          <div class="mt-3 space-y-2 text-sm">
+            <a class="footer-link" href="../capabilities/index.html">能力</a>
+            <a class="footer-link" href="../solutions/index.html">解决方案</a>
+            <a class="footer-link" href="../services/index.html">服务</a>
+            <a class="footer-link" href="./index.html">产品</a>
+            <a class="footer-link" href="../cases/index.html">案例</a>
+            <a class="footer-link" href="../docs/index.html" data-i18n="footer_docs">投标与资料</a>
+            <a class="footer-link" href="../contact/index.html">联系</a>
+          </div>
+        </div>
+        <div>
+          <div class="font-semibold" data-i18n="footer_services">服务项目</div>
+          <div class="mt-3 space-y-2 text-sm">
+            <div class="text-slate-600" data-i18n="footer_s1">展示设计 / 装修装饰</div>
+            <div class="text-slate-600" data-i18n="footer_s2">数字多媒体 / 活动执行</div>
+            <div class="text-slate-600" data-i18n="footer_s3">市场推广 / 企业形象展示</div>
+          </div>
+        </div>
+        <div>
+          <div class="font-semibold" data-i18n="footer_contact">联系</div>
+          <div class="mt-3 space-y-2 text-sm text-slate-600">
+            <div>电话：010-66169644</div>
+            <div>邮箱：139965886@qq.com</div>
+            <div>公众号：ae800com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-slate-200 pt-6">
+        <div class="text-sm text-slate-500">Copyright © 2001 - 2025 ae800.com</div>
+        <div class="text-sm text-slate-500" data-i18n="footer_note">新站模板 · 可交互静态演示</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/main.js" defer></script>
+</body>
+</html>
