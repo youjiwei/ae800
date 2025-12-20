@@ -549,16 +549,90 @@
         </div>
 
         <div class="mt-8 flex flex-wrap items-center gap-2" aria-label="案例筛选">
-          <button class="filter-chip is-active" data-filter="museum" type="button">博物馆</button>
-          <button class="filter-chip" data-filter="national_museum" type="button">国家博物馆</button>
-          <button class="filter-chip" data-filter="red_party" type="button">红色党建</button>
-          <button class="filter-chip" data-filter="achievement" type="button">成就展</button>
-          <button class="filter-chip" data-filter="city_showroom" type="button">城市展厅</button>
-          <button class="filter-chip" data-filter="retail" type="button">商业展示</button>
+          <button class="filter-chip is-active" data-filter="all" type="button" data-i18n="case_filter_all">全部</button>
+          <button class="filter-chip" data-filter="museum" type="button" data-i18n="case_filter_museum">博物馆/纪念馆</button>
+          <button class="filter-chip" data-filter="exhibition" type="button" data-i18n="case_filter_exhibition">大型成就展</button>
+          <button class="filter-chip" data-filter="brand" type="button" data-i18n="case_filter_brand">标识/形象展示</button>
         </div>
 
-        <div class="mt-8 overflow-x-auto" style="scrollbar-width:none;-ms-overflow-style:none;">
-          <div class="flex gap-4 min-w-full" id="caseGrid" style="scroll-snap-type:x mandatory;"></div>
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="caseGrid">
+          <article class="case-card" data-tags="museum">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">博物馆</div>
+              <h3 class="mt-1 font-semibold">北京奥运博物馆（升级改造）</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">主题“圆梦双奥，共创未来”，面向公众呈现“双奥之城”历史与成就，强调奥林匹克精神传播。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="https://www.ae800.com/case/112" target="_blank" rel="noreferrer">查看原站详情</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-tags="museum exhibition">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1554188572-4b09a1bfa0d8?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">大型展览</div>
+              <h3 class="mt-1 font-semibold">北京大兴国际机场爱国主义教育示范基地</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">“凤凰展翅逐梦蓝天”，位于航站楼三层安检后，分为序厅、正厅、尾厅，占地约1260㎡。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="https://www.ae800.com/case/116" target="_blank" rel="noreferrer">查看原站详情</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-tags="exhibition">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">大型成就展</div>
+              <h3 class="mt-1 font-semibold">“砥砺奋进的五年”大型成就展</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">2017年北京展览馆开幕，展期两个月，展示过去五年重大成就与发展。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="https://www.ae800.com/case/77" target="_blank" rel="noreferrer">查看原站详情</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-tags="museum">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">纪念馆</div>
+              <h3 class="mt-1 font-semibold">《南京大屠杀史实展》</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">2017年12月13日开幕，通过多种形式呈现历史事实与影响，面向公众教育传播。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="https://www.ae800.com/case/97" target="_blank" rel="noreferrer">查看原站详情</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-tags="brand">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1582719478171-2ff0c7fd7f7f?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">标识/形象</div>
+              <h3 class="mt-1 font-semibold">导视标识与形象展示（示例）</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">面向园区/展馆/公共空间，提供导视系统、形象墙、发光字等一体化制作与安装。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="./products/index.html">查看产品方向</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-tags="museum exhibition">
+            <div class="case-cover" style="background-image:url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=70')"></div>
+            <div class="p-5">
+              <div class="text-xs text-slate-500">馆展实施</div>
+              <h3 class="mt-1 font-semibold">复兴之路·新时代部分（示例）</h3>
+              <p class="mt-2 text-sm text-slate-600 line-clamp-3">以展陈叙事、展项制作与现场实施为核心，确保设计-技术-施工的系统推演与落地。</p>
+              <div class="mt-4 flex items-center justify-between">
+                <a class="text-brand-700 font-medium hover:underline" href="https://www.ae800.com/case/96" target="_blank" rel="noreferrer">查看原站详情</a>
+                <span class="text-xs text-slate-500">示例</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>

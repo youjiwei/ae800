@@ -1697,143 +1697,14 @@ function initSubnavSpy() {
   sections.forEach((s) => observer.observe(s));
 }
 
-async function initHomeCases() {
-  const grid = $('#caseGrid');
-  if (!grid) return;
-
-  try {
-    const res = await fetch('./cases/data/cases.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    const cases = Array.isArray(data) ? data : Array.isArray(data?.cases) ? data.cases : [];
-    if (!cases.length) {
-      grid.innerHTML = `
-        <div class="md:col-span-2 lg:col-span-3">
-          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-700" style="border-radius:var(--radius)">
-            案例数据为空：未读取到 cases/data/cases.json 中的 cases 列表。
-          </div>
-        </div>
-      `;
-      return;
-    }
-
-    const getFirstImage = (c) => {
-      const img = Array.isArray(c.images) && c.images.length ? String(c.images[0] || '') : '';
-      if (!img) return '';
-      const rel = img.replace(/^\.\//, '');
-      return `./cases/${rel}`;
-    };
-
-    const hasAny = (arr, keywords) => {
-      const list = Array.isArray(arr) ? arr : [];
-      return keywords.some((k) => list.some((t) => String(t || '').includes(k)));
-    };
-
-    const computeTags = (c) => {
-      const tags = Array.isArray(c.tags) ? c.tags : [];
-      const original = String(c.original_category || '');
-      const extra = [];
-
-      const isMuseum = String(c.category || '') === 'museum'
-        || original.includes('博物馆')
-        || original.includes('纪念馆')
-        || hasAny(tags, ['博物馆', '纪念馆']);
-
-      const isNationalMuseum = original.includes('国家博物馆')
-        || hasAny(tags, ['国家博物馆', '中国国家博物馆', '国博']);
-
-      const isRedParty = original.includes('红色')
-        || original.includes('党建')
-        || hasAny(tags, ['红色党建', '红色', '党建', '党史', '革命']);
-
-      const isAchievement = String(c.category || '') === 'achievement'
-        || original.includes('成就展')
-        || hasAny(tags, ['成就展', '大型成就展', '展览', '改革开放', '伟大变革', '砥砺奋进']);
-
-      const isCityShowroom = String(c.category || '') === 'city'
-        || original.includes('城市展厅')
-        || original.includes('城市展馆')
-        || hasAny(tags, ['城市展厅', '城市展馆', '城市展厅/展馆']);
-
-      const isRetail = String(c.category || '') === 'retail'
-        || original.includes('商业')
-        || hasAny(tags, ['商业展示', '商业', '零售', '门店', '品牌店']);
-
-      if (isMuseum) extra.push('museum');
-      if (isNationalMuseum) extra.push('national_museum');
-      if (isRedParty) extra.push('red_party');
-      if (isAchievement) extra.push('achievement');
-      if (isCityShowroom) extra.push('city_showroom');
-      if (isRetail) extra.push('retail');
-
-      if (!extra.length) extra.push('all');
-      return extra.join(' ');
-    };
-
-    const pickedAll = cases.filter((c) => /^case-\d+$/.test(String(c.id || '')));
-    const picked = pickedAll.slice(0, 10);
-
-    if (!pickedAll.length) {
-      grid.innerHTML = `
-        <div class="md:col-span-2 lg:col-span-3">
-          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-700" style="border-radius:var(--radius)">
-            案例数据已加载，但没有找到形如 case-123 的 id。
-          </div>
-        </div>
-      `;
-      return;
-    }
-
-    grid.innerHTML = '';
-    picked.forEach((c) => {
-      const a = document.createElement('a');
-      a.className = 'case-card';
-      a.href = `./cases/${c.id}.html`;
-      a.dataset.tags = computeTags(c);
-      a.style.flex = '0 0 auto';
-      a.style.width = '320px';
-      a.style.scrollSnapAlign = 'start';
-
-      const coverImg = getFirstImage(c);
-      const coverStyle = coverImg ? `background-image:url('${coverImg.replace(/'/g, '%27')}')` : '';
-      const title = String(c.title || c.id || '');
-      const desc = String(c.description || '').replace(/\s+/g, ' ').trim();
-      const shortDesc = desc.length > 66 ? `${desc.slice(0, 66)}…` : (desc || '');
-
-      a.innerHTML = `
-        <div class="case-cover" style="${coverStyle}"></div>
-        <div class="p-5">
-          <div class="text-xs text-slate-500">${String(c.original_category || c.category || '案例')}</div>
-          <div class="mt-1 font-semibold">${title}</div>
-          <div class="mt-2 text-sm text-slate-600">${shortDesc}</div>
-          <div class="mt-4 text-brand-700 font-medium">查看案例详情</div>
-        </div>
-      `;
-
-      grid.appendChild(a);
-    });
-  } catch (e) {
-    console.error('[home cases] failed to load ./cases/data/cases.json', e);
-    grid.innerHTML = `
-      <div class="md:col-span-2 lg:col-span-3">
-        <div class="rounded-3xl border border-amber-200 bg-amber-50 p-6" style="border-radius:var(--radius)">
-          <div class="font-semibold text-amber-900">精选案例加载失败</div>
-          <div class="mt-2 text-sm text-amber-900/80">请确认你是通过 http://localhost 访问（不要用 file:// 直接打开），并且 cases/data/cases.json 存在。</div>
-          <div class="mt-2 text-xs text-amber-900/80">错误：${String(e?.message || e)}</div>
-        </div>
-      </div>
-    `;
-  }
-}
-
 function initCaseFilter() {
   const grid = $('#caseGrid');
   if (!grid) return;
 
   const chips = $$('.filter-chip');
+  const cards = $$('.case-card', grid);
 
   const apply = (filter) => {
-    const cards = $$('.case-card', grid);
     chips.forEach((c) => c.classList.toggle('is-active', c.dataset.filter === filter));
     cards.forEach((card) => {
       const tags = String(card.dataset.tags || '');
@@ -1846,8 +1717,7 @@ function initCaseFilter() {
     chip.addEventListener('click', () => apply(chip.dataset.filter || 'all'));
   });
 
-  const initial = chips.find((c) => c.classList.contains('is-active'))?.dataset?.filter || chips[0]?.dataset?.filter || 'all';
-  apply(initial);
+  apply('all');
 }
 
 function initLightbox() {
@@ -2132,7 +2002,7 @@ initHeaderScroll();
 initBackToTop();
 initScrollSpy();
 initSubnavSpy();
-initHomeCases().then(() => initCaseFilter());
+initCaseFilter();
 initFAQ();
 initScenarios();
 initForms();

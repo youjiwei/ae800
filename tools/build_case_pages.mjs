@@ -3,25 +3,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const JSON_PATH_V1 = path.join(ROOT, 'cases', 'data', 'cases.json');
-const JSON_PATH_V2 = path.join(ROOT, 'cases', 'data', 'cases.v2.json');
+const JSON_PATH = path.join(ROOT, 'cases', 'data', 'cases.json');
 const OUT_DIR = path.join(ROOT, 'cases');
-
-async function loadCases() {
-  try {
-    const raw2 = await fs.readFile(JSON_PATH_V2, 'utf8');
-    const parsed2 = JSON.parse(raw2);
-    if (Array.isArray(parsed2?.cases)) {
-      return { cases: parsed2.cases, sourcePath: JSON_PATH_V2 };
-    }
-  } catch {
-    // fall back to v1
-  }
-
-  const raw1 = await fs.readFile(JSON_PATH_V1, 'utf8');
-  const parsed1 = JSON.parse(raw1);
-  return { cases: Array.isArray(parsed1?.cases) ? parsed1.cases : [], sourcePath: JSON_PATH_V1 };
-}
 
 function escHtml(s) {
   return String(s ?? '')
@@ -66,75 +49,6 @@ function normalizeTags(tags) {
     out.push(t);
   }
   return out;
-}
-
-function getTagsV2(c) {
-  const tv2 = c?.tags_v2;
-  if (!tv2 || typeof tv2 !== 'object') return null;
-  const scene = Array.isArray(tv2.scene) ? tv2.scene.filter(Boolean).map(String) : [];
-  const deliverables = Array.isArray(tv2.deliverables) ? tv2.deliverables.filter(Boolean).map(String) : [];
-  const experience = Array.isArray(tv2.experience) ? tv2.experience.filter(Boolean).map(String) : [];
-  const meta = tv2.meta && typeof tv2.meta === 'object' ? tv2.meta : {};
-  return { scene, deliverables, experience, meta };
-}
-
-function oneLineSummary(c) {
-  const tv2 = getTagsV2(c);
-  const cat = String(c?.original_category || c?.category || '').trim();
-  const scene = tv2?.scene?.[0] ? String(tv2.scene[0]).trim() : '';
-  const deliver = tv2?.deliverables?.length ? tv2.deliverables.slice(0, 3).join(' / ') : '';
-  const exp = tv2?.experience?.length ? tv2.experience.slice(0, 2).join(' / ') : '';
-
-  const parts = [
-    scene || cat,
-    deliver ? `交付：${deliver}` : '',
-    exp ? `体验：${exp}` : ''
-  ].filter(Boolean);
-
-  let s = parts.join('｜');
-  if (s.length > 90) s = `${s.slice(0, 88)}…`;
-  return s;
-}
-
-function ensureOverview(c) {
-  const raw = String(c?.description || '').trim();
-  if (raw && raw.length >= 60) return raw;
-
-  const tv2 = getTagsV2(c);
-  const title = String(c?.title || c?.id || '').trim();
-  const year = String(c?.year || tv2?.meta?.year || '').trim();
-  const city = String(tv2?.meta?.city || c?.city || '').trim();
-  const scene = tv2?.scene?.length ? tv2.scene.join(' / ') : '';
-  const exp = tv2?.experience?.length ? tv2.experience.join(' / ') : '';
-  const deliver = tv2?.deliverables?.length ? tv2.deliverables.join(' / ') : '';
-
-  const head = [title, [city, year].filter(Boolean).join(' · ')].filter(Boolean).join(' — ');
-  const lines = [
-    head,
-    scene ? `场景：${scene}` : '',
-    deliver ? `交付：${deliver}` : '',
-    exp ? `体验：${exp}` : ''
-  ].filter(Boolean);
-
-  return lines.join('\n');
-}
-
-function ensureScopeList(c) {
-  const scope = Array.isArray(c?.scope) ? c.scope.filter(Boolean).map((x) => String(x).trim()).filter(Boolean) : [];
-  if (scope.length) return scope;
-
-  const tv2 = getTagsV2(c);
-  const fromV2 = tv2?.deliverables?.filter(Boolean).map((x) => String(x).trim()).filter(Boolean) || [];
-  if (fromV2.length) return fromV2;
-
-  const tags = normalizeTags(c?.tags);
-  const guess = [];
-  const has = (re) => tags.some((t) => re.test(String(t)));
-  if (has(/导视|标识/)) guess.push('导视标识系统');
-  if (has(/互动|多媒体|数字/)) guess.push('多媒体应用');
-  if (has(/灯箱|发光/)) guess.push('灯箱系统');
-  if (has(/结构|装置|展陈/)) guess.push('展示结构与装置');
-  return guess;
 }
 
 function headerHtml() {
@@ -225,7 +139,7 @@ function buildRelated(cases, current, max = 6) {
   return scored.slice(0, max).map((x) => x.c);
 }
 
-function buildCasePage(allCases, c, sourceNote) {
+function buildCasePage(allCases, c) {
   const id = String(c.id || '');
   const titleRaw = String(c.title || id);
   const title = escHtml(titleRaw);
@@ -245,10 +159,8 @@ function buildCasePage(allCases, c, sourceNote) {
   const coverCss = `background-image:url('${String(cover).replace(/'/g, '%27')}')`;
   const ogImageAbs = absCaseUrl(images[0] || '');
 
-  const overview = ensureOverview(c);
-  const summary = oneLineSummary(c);
-  const descShort = escHtml((overview || '案例详情（本地化模板）。').toString().slice(0, 140));
-  const descFull = escHtml(overview || '');
+  const descShort = escHtml((c.description || '案例详情（本地化模板）。').toString().slice(0, 140));
+  const descFull = escHtml(c.description || '');
 
   const pills = [
     city && `<span class="pill">${city}</span>`,
@@ -257,7 +169,7 @@ function buildCasePage(allCases, c, sourceNote) {
     originalCat && `<span class="pill">${originalCat}</span>`
   ].filter(Boolean).join('');
 
-  const scope = ensureScopeList(c).map(escHtml);
+  const scope = Array.isArray(c.scope) ? c.scope.filter(Boolean).map(escHtml) : [];
   const scopeLi = scope.map((s) => `<li>${s}</li>`).join('');
   const scopeBlock = scopeLi
     ? `<ul class="mt-3 list-disc pl-5 text-slate-700">${scopeLi}</ul>`
@@ -277,6 +189,11 @@ function buildCasePage(allCases, c, sourceNote) {
       return `<a href="${safe}" data-lightbox data-lb-src="${safe}" data-lb-alt="${alt}" data-lb-group="${escHtml(id)}" class="block" aria-label="查看大图"><img loading="lazy" src="${safe}" alt="${alt}" class="w-full h-44 object-cover rounded-2xl border border-slate-200" style="border-radius:var(--radius)" /></a>`;
     })
     .join('');
+
+  const sourceUrl = c.source_url ? String(c.source_url) : '';
+  const sourceLink = sourceUrl
+    ? `<div class="mt-3"><a class="footer-link" href="${sourceUrl}" target="_blank" rel="noopener">查看原站案例：${escHtml(sourceUrl)}</a></div>`
+    : '';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -316,6 +233,7 @@ function buildCasePage(allCases, c, sourceNote) {
             <div class="text-xs text-slate-500">${rmeta}</div>
             <div class="mt-1 font-semibold">${rtitle}</div>
             <div class="mt-3 text-brand-700 font-medium">查看</div>
+          </div>
         </a>`;
     })
     .join('');
@@ -378,7 +296,6 @@ ${headerHtml()}
           <div class="flex items-start justify-between gap-4">
             <div>
               <div class="text-brand-700 font-medium">项目要点</div>
-              <div class="mt-2 text-sm text-slate-700">${escHtml(summary)}</div>
               <div class="mt-2 flex flex-wrap gap-2 text-sm">${pills}</div>
               <div class="mt-3 flex flex-wrap gap-2">${tagHtml}</div>
             </div>
@@ -389,8 +306,8 @@ ${headerHtml()}
         <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-6" style="border-radius:var(--radius)">
           <div class="flex items-center justify-between gap-4">
             <div>
-              <div class="text-brand-700 font-medium">项目图片</div>
-              <div class="mt-1 text-sm text-slate-600">图片不自动下载；以数据文件中的 images 为准。</div>
+              <div class="text-brand-700 font-medium">项目图片（本地化）</div>
+              <div class="mt-1 text-sm text-slate-600">已下载到本地：cases/assets/${escHtml(id)}/</div>
             </div>
             <div class="text-sm text-slate-500">共 ${images.length} 张</div>
           </div>
@@ -398,7 +315,7 @@ ${headerHtml()}
         </div>
 
         <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-6" style="border-radius:var(--radius)">
-          <div class="text-brand-700 font-medium">项目概况</div>
+          <div class="text-brand-700 font-medium">项目概述</div>
           <p class="mt-3 text-slate-700" style="white-space:pre-wrap">${descFull}</p>
         </div>
 
@@ -410,6 +327,12 @@ ${headerHtml()}
         <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-6" style="border-radius:var(--radius)">
           <div class="text-brand-700 font-medium">亮点与验收口径（建议）</div>
           ${highBlock}
+        </div>
+
+        <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-6" style="border-radius:var(--radius)">
+          <div class="text-brand-700 font-medium">来源与参考</div>
+          <div class="mt-2 text-sm text-slate-600">本页面由 cases/data/cases.json 自动生成，便于 SEO 与站内检索。</div>
+          ${sourceLink}
         </div>
       </div>
 
@@ -478,13 +401,12 @@ ${headerHtml()}
   <script src="../assets/main.js"></script>
 </body>
 </html>`;
-
 }
 
 async function main() {
-  const loaded = await loadCases();
-  const cases = loaded.cases;
-  const sourceNote = loaded.sourcePath.includes('cases.v2.json') ? 'cases/data/cases.v2.json' : 'cases/data/cases.json';
+  const raw = await fs.readFile(JSON_PATH, 'utf8');
+  const parsed = JSON.parse(raw);
+  const cases = Array.isArray(parsed) ? parsed : Array.isArray(parsed?.cases) ? parsed.cases : [];
 
   await fs.mkdir(OUT_DIR, { recursive: true });
 
@@ -492,13 +414,13 @@ async function main() {
   for (const c of cases) {
     const id = String(c.id || '');
     if (!/^case-\d+$/.test(id)) continue;
-    const outFile = path.join(OUT_DIR, `${id}.html`);
-    const html = buildCasePage(cases, c, sourceNote);
-    await fs.writeFile(outFile, html, 'utf8');
+    const html = buildCasePage(cases, c);
+    const out = path.join(OUT_DIR, `${id}.html`);
+    await fs.writeFile(out, html, 'utf8');
     count += 1;
   }
 
-  console.log(`Generated ${count} case pages from ${loaded.sourcePath} -> ${OUT_DIR}`);
+  console.log(`Generated ${count} case pages -> ${OUT_DIR}`);
 }
 
 await main();
